@@ -9,7 +9,7 @@
 // Feel free to add more tags
 // -------------------------------------------------------------------
 myDotclearSettings = {
-    nameSpace:			"dotclear", // Useful to prevent multi-instances CSS conflict
+	nameSpace:		"dotclear", // Useful to prevent multi-instances CSS conflict
 	previewParserPath:	'', // path to your DotClear parser
 	onShiftEnter:		{keepDefault:false, replaceWith:'%%%\n'},
 	onCtrlEnter:		{keepDefault:false, replaceWith:'\n\n'},

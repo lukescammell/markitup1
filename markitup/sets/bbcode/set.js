@@ -10,7 +10,7 @@
 // Feel free to add more tags
 // ----------------------------------------------------------------------------
 myBbcodeSettings = {
-    nameSpace:			"bbcode", // Useful to prevent multi-instances CSS conflict
+	nameSpace:		"bbcode", // Useful to prevent multi-instances CSS conflict
 	previewParserPath:	'', // path to your BBCode parser
 	markupSet: [
 		{name:'Bold', key:'B', openWith:'[b]', closeWith:'[/b]', className:'mui-btn-strong'},

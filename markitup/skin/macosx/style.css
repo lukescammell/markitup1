@@ -3,139 +3,154 @@
 // By Jay Salvat - http://markitup.jaysalvat.com/
 // ------------------------------------------------------------------*/
 
-/*	markitup skin simple
- *	--------------------
- *	Filename:		style.css
- *	Skin name:		Simple
- *	Description:	A simple, neutral skin that should fit into most designs
- *	URL:			http://markitup.jaysalvat.com/downloads/demo.php?id=skins/simple
- *	Authors:		Jay Salvat - http://markitup.jaysalvat.com/
- *					Luke Scammell - http://scammell.co.uk/
+/* markitup skin macosx
+ * --------------------
+ * Filename:	style.css
+ * Skin name:	MacOSX
+ * Description:	A Mac OSX inspired skin.
+ * URL:		http://markitup.jaysalvat.com/downloads/demo.php?id=skins/macosx
+ * Authors:	Jay Salvat - http://markitup.jaysalvat.com/
+ * 		Luke Scammell - http://scammell.co.uk/
  */
+body {
+/*	background-color:#3875D7; */
+	}
+.markItUp {
+	background-color:#3875D7;
+	border:1px solid #3C769D;
+	padding:13px;
+	width:670px;
+	margin:5px 0 5px 0;
+	}
 .markItUp * {
-	margin:0px; padding:0px;
+	margin:0;
+	padding:0;
 	outline:none;
-}
+	}
 .markItUp a:link,
 .markItUp a:visited {
 	color:#000;
 	text-decoration:none;
-}
-.markItUp  {
-	width:700px;
-	margin:5px 0 5px 0;
-	border:0;					/* LS 2010-05-05 13:18:07 - Added to enable on-the-fly style switching and prevent the default style showing through */	
-}
-.markItUpContainer  {
+	}
+.markItUp .markItUpContainer {
+	width:670px;
 	font:11px Verdana, Arial, Helvetica, sans-serif;
-	background:none;
-	border:0;
-}
-.markItUpEditor {
+	background-image:url(images/bg-container.png);
+	background-repeat:repeat-y;			/* LS 2010-05-06 10:47:48 - needed to stop stuff showing through from the Markitup skin... */
+	}
+.markItUpContainer .markItUpEditor {
 	font:12px "Consolas", "DejaVu Sans Mono", "Monaco", "Andale Mono", "Courier New", monospace;	/* LS 2010-05-06 10:10:55 - Courier is just so old... */
-	padding:5px;
-	width:690px;
+	padding:10px;
+	margin:0 11px 0 11px;
+	width:630px;
 	height:320px;
-	clear:both; display:block;
+	clear:both;
+	display:block;
 	line-height:18px;
 	overflow:auto;
-	border:0;					/* LS 2010-05-05 13:18:07 - Added to enable on-the-fly style switching and prevent the default style showing through */
-	border-width:1px;
-	border-color:#ddd;
-	border-style:solid;
-	-moz-border-radius:4px;
-	-webkit-border-radius:4px;
-	border-radius:4px;			/* LS 2010-05-06 10:12:04 - something nice and subtle to fit into current design themes */
-}
-div.markItUpContainer .markItUpEditor {
-	background-image:none;		/* LS 2010-05-05 13:26:14 - Added to enable on-the-fly style switching and prevent the default style showing through */
+	border:0;
+	background:0;
 	}
-.markItUpPreviewFrame	{
+.markItUpPreviewFrame {
 	overflow:auto;
 	background-color:#fff;
 	width:99.9%;
 	height:350px;
 	margin:5px 0;
-}
+	}
+.markItUpHeader {
+	width:650px;
+	padding:15px 0 0 20px;
+	height:25px;
+	background-image:url(images/bg-header.png);
+	}
 .markItUpFooter {
-	width:100%;
-}
+	width:670px;
+	height:25px;
+	background-image:url(images/bg-footer.png);
+	padding-bottom:10px;
+	}
 .markItUpResizeHandle {
+	margin:0 12px 5px auto;
 	overflow:hidden;
-	width:22px; height:5px;
-	margin-left:auto;
-	margin-right:auto;
+	width:12px;
+	height:12px;
+	position:relative;
 	background-image:url(images/handle.png);
 	cursor:n-resize;
-}
+	}
 /***************************************************************************************/
 /* first row of buttons */
-.markItUpHeader ul li	{
+.markItUpHeader ul li {
 	list-style:none;
 	float:left;
 	position:relative;
-}
+	}
 .markItUpHeader ul li:hover > ul{
 	display:block;
-}
+	}
 .markItUpHeader ul .markItUpDropMenu {
 	background:transparent url(images/menu.png) no-repeat 115% 50%;
 	margin-right:5px;
-}
+	}
 .markItUpHeader ul .markItUpDropMenu li {
-	margin-right:0px;
-}
+	margin-right:0;
+	}
 /* next rows of buttons */
 .markItUpHeader ul ul {
 	display:none;
 	position:absolute;
-	top:18px; left:0px;	
+	top:18px;
+	left:0;
 	background:#fff;
 	border:1px solid #000;
-}
+	}
 .markItUpHeader ul ul li {
 	float:none;
 	border-bottom:1px solid #000;
-}
+	}
 .markItUpHeader ul ul .markItUpDropMenu {
 	background:#fff url(images/submenu.png) no-repeat 100% 50%;
-}
+	}
 .markItUpHeader ul .markItUpSeparator {
 	margin:0 10px;
 	width:1px;
 	height:16px;
 	overflow:hidden;
-	background-color:#CCC;
-}
+	background-color:#ccc;
+	}
 .markItUpHeader ul ul .markItUpSeparator {
-	width:auto; height:1px;
-	margin:0px;
-}
+	width:auto;
+	height:1px;
+	margin:0;
+	}
 /* next rows of buttons */
 .markItUpHeader ul ul ul {
 	position:absolute;
-	top:-1px; left:150px; 
+	top:-1px;
+	left:150px;
 }
 .markItUpHeader ul ul ul li {
 	float:none;
-}
+	}
 .markItUpHeader ul a {
 	display:block;
-	width:16px; height:16px;
+	width:16px;
+	height:16px;
 	text-indent:-10000px;
 	background-repeat:no-repeat;
 	padding:3px;
-	margin:0px;
-}
+	margin:0;
+	}
 .markItUpHeader ul ul a {
 	display:block;
-	padding-left:0px;
+	padding-left:0;
 	text-indent:0;
-	width:120px; 
+	width:120px;
 	padding:5px 5px 5px 25px;
 	background-position:2px 50%;
-}
-.markItUpHeader ul ul a:hover  {
+	}
+.markItUpHeader ul ul a:hover {
 	color:#fff;
-	background-color:#000;
-}
+	background-color:#3875D7;
+	}

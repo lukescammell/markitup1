@@ -11,7 +11,7 @@
 // Feel free to add more tags
 // -------------------------------------------------------------------
 myMarkdownSettings = {
-    nameSpace:			"markdown", // Useful to prevent multi-instances CSS conflict
+	nameSpace:		"markdown", // Useful to prevent multi-instances CSS conflict
 	previewParserPath:	'',
 	onShiftEnter:		{keepDefault:false, openWith:'\n\n'},
 	markupSet: [

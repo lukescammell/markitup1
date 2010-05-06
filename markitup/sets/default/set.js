@@ -10,10 +10,10 @@
 // Basic set. Feel free to add more tags
 // ----------------------------------------------------------------------------
 mySettings = {
-    nameSpace:		"markItUp", // Useful to prevent multi-instances CSS conflict
+	nameSpace:	"markItUp", // Useful to prevent multi-instances CSS conflict
 	onShiftEnter:  	{keepDefault:false, replaceWith:'<br />\n'},
 	onCtrlEnter:  	{keepDefault:false, openWith:'\n<p>', closeWith:'</p>'},
-	onTab:    		{keepDefault:false, replaceWith:'    '},
+	onTab:    	{keepDefault:false, replaceWith:'    '},
 	markupSet:  [ 	
 		{name:'Bold', key:'B', openWith:'(!(<strong>|!|<b>)!)', closeWith:'(!(</strong>|!|</b>)!)' },
 		{name:'Italic', key:'I', openWith:'(!(<em>|!|<i>)!)', closeWith:'(!(</em>|!|</i>)!)'  },
