@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>markItUp! Universal markup editor</title>
+		<link rel="stylesheet" type="text/css" href="images/style.css" />
+		<!-- jQuery -->
+		<!-- Just in case you want to run it locally... -->
+		<!-- <script type="text/javascript" language="javascript" src="jquery-1.4.2.min.js"></script> -->
+		<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+		<!-- markItUp! -->
+		<script type="text/javascript" language="javascript" src="markitup/jquery.markitup.js"></script>
+		<!-- markItUp! toolbar settings -->
+		<script type="text/javascript" language="javascript" src="markitup/sets/default/set.js"></script>
+		<script type="text/javascript" language="javascript" src="markitup/sets/bbcode/set.js"></script>
+		<script type="text/javascript" language="javascript" src="markitup/sets/dotclear/set.js"></script>
+		<script type="text/javascript" language="javascript" src="markitup/sets/html/set.js"></script>
+		<script type="text/javascript" language="javascript" src="markitup/sets/markdown/set.js"></script>
+		<script type="text/javascript" language="javascript" src="markitup/sets/textile/set.js"></script>
+		<script type="text/javascript" language="javascript" src="markitup/sets/texy/set.js"></script>
+		<script type="text/javascript" language="javascript" src="markitup/sets/txt2tags/set.js"></script>
+		<script type="text/javascript" language="javascript" src="markitup/sets/xbbcode/set.js"></script>
+		<!-- Stylesheet Switcher - not required for general use -->
+		<!-- http://webdevcodex.com/how-to-switch-to-an-alternate-stylesheet-using-jquery/ -->
+		<!-- LS 2010-05-05 12:55:11 -->
+		<script type="text/javascript" language="javascript" src="switchstylesheet.js"></script>
+		<script type="text/javascript">
+		<!--
+		$(document).ready(function()	{
+			/* LS 2010-05-06 13:45:39
+			 * ----------------------
+			 * TODO
+			 * Put this into this page as an example.
+			 */
+			// You can add content from anywhere in your page
+			// $.markItUp( { Settings } );	
+			/*$('.add').click(function() {
+				$.markItUp( { 	openWith:'<opening tag>',
+						closeWith:'<\/closing tag>',
+						placeHolder:"New content"
+						}
+				);
+				return false;
+			});*/
+			
+			
+			/* LS 2010-05-06 13:45:39
+			 * ----------------------
+			 * TODO
+			 * Put this into this page as a separate example
+			 * and remove the "Remove" from the set switcher.
+			 */
+			// And you can add/remove markItUp! whenever you want
+			// $(textarea).markItUpRemove();
+			/*$('.toggle').click(function() {
+				if ($("#markItUp.markItUpEditor").length === 1) {
+					$("#markItUp").markItUpRemove();
+					$("span", this).text("get markItUp! back");
+				} else {
+					$('#markItUp').markItUp(mySettings);
+					$("span", this).text("remove markItUp!");
+				}
+				return false;
+			});*/
+			
+			/* LS 2010-05-05 09:09:55
+			 * ----------------------
+			 * This is all you need.
+			 * Add markItUp! to your textarea in one line
+			 * $('textarea').markItUp( { Settings }, { OptionalExtraSettings } );
+			 */
+			$('#multiSet').markItUp(myHtmlSettings);
+
+			
+			/* LS 2010-05-05 09:12:51
+			 * ----------------------
+			 * This is the "Set Switcher" that allows you to change which set you are using
+			 */
+			$('#switcher li').click(function() {
+					$('#switcher li').removeClass('currentSet');
+					newSet = $(this).attr('class');
+					$(this).addClass('currentSet');
+					
+					$('#multiSet').markItUpRemove();			
+					switch(newSet) {
+						case 'default':
+							$('#multiSet').markItUp(myDefaultSettings);
+							break;
+						case 'bbcode':
+							$('#multiSet').markItUp(myBbcodeSettings);
+							break;
+						case 'dotclear':
+							$('#multiSet').markItUp(myDotclearSettings);
+							break;
+						case 'html':
+							$('#multiSet').markItUp(myHtmlSettings);
+							break;
+						case 'markdown':
+							$('#multiSet').markItUp(myMarkdownSettings);
+							break;
+						case 'textile':
+							$('#multiSet').markItUp(myTextileSettings);
+							break;
+						case 'texy':
+							$('#multiSet').markItUp(myTexySettings);
+							break;
+						case 'txt2tags':
+							$('#multiSet').markItUp(myTxt2tagsSettings);
+							break;
+						case 'xbbcode':
+							$('#multiSet').markItUp(myXbbcodeSettings);
+							break;
+					}
+					return false;
+				}
+			);
+			
+			/* LS 2010-05-05 12:52:00
+			 * ----------------------
+			 * Just for changing the stylesheets on the fly.
+			 */
+			$(".switch-skin").switchstylesheet( { seperator:"skin"} );
+		});
+		-->
+		</script>
+		<!-- markItUp! skin -->
+		<link rel="stylesheet" type="text/css" href="markitup/skin/markitup/style.css" />
+		<!-- alternate skin stylesheets which won't be loaded unless selected -->
+		<link rel="alternate stylesheet" type="text/css" href="markitup/skin/jtageditor/style.css" title="jtageditor-skin" />
+		<link rel="alternate stylesheet" type="text/css" href="markitup/skin/live/style.css" title="live-skin" />
+		<link rel="alternate stylesheet" type="text/css" href="markitup/skin/macosx/style.css" title="macosx-skin" />
+		<link rel="alternate stylesheet" type="text/css" href="markitup/skin/simple/style.css" title="simple-skin" />
+		<style type="text/css">
+		<!--
+		/* LS 2010-05-06 13:40:36
+		 * ----------------------
+		 * Styling for the set switcher, not required for general use.
+		 */
+			#switcher {
+				height:30px;
+				padding-top:15px;
+			}
+			#switcher li {
+				list-style:none;
+				float:left;
+				margin-right:20px;
+			}
+			#switcher .currentSet {
+				font-weight:bold;
+				color:#990066;
+				padding-left:20px;
+				background:transparent url(http://markitup.jaysalvat.com/_images/icons/accept.png) no-repeat top left;
+			}
+		-->
+		</style>
+	</head>
+	<body>
+		<h1><a href="http://markitup.jaysalvat.com/">markItUp!</a></h1>
+		<p><em><a href="http://www.jaysalvat.com">By Jay Salvat</a></em></p>
+		<p>Downloads, examples and documentation at <a href="http://markitup.jaysalvat.com">http://markitup.jaysalvat.com</a>.</p>
+		<p>Click <a href="#" class="add">this link to insert content</a> from anywhere in the page or <a href="#" class="toggle">this one to <span>remove markItUp!</span></a></p>
+		<div id="content">
+			
+			<h1>Examples</h1>
+			
+			<h2>Switch and Remove</h2>
+			
+			<p>
+				<a href="#" class="switch-skin" title="markitup-skin">markitup</a> | 
+				<a href="#" class="switch-skin" title="jtageditor-skin">jtageditor</a> | 
+				<a href="#" class="switch-skin" title="live-skin">live</a> | 
+				<a href="#" class="switch-skin" title="macosx-skin">macosx</a> | 
+				<a href="#" class="switch-skin" title="simple-skin">simple</a>
+			</p>
+			
+			<p><strong>markItUp!</strong> can easily be added and removed on the fly.</p>
+
+			<ul id="switcher">
+				<li class="bbcode"><a href="#">BBCode</a></li>
+				<li class="dotclear"><a href="#">dotclear</a></li>
+				<li class="html currentSet"><a href="#">HTML</a></li>
+				<li class="markdown"><a href="#">Markdown</a></li>
+				<li class="textile"><a href="#">Textile</a></li>
+				<li class="texy"><a href="#">texy</a></li>
+				<li class="txt2tags"><a href="#">txt2tags</a></li>
+				<li class="xbbcode"><a href="#">xbbcode</a></li>
+				<li class="remove"><a href="#">Remove markItUp!</a></li>
+			</ul>
+			
+			<p>
+				<textarea id="multiSet" cols="80" rows="20">&lt;h1&gt;Welcome on markItUp!&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;markItUp!&lt;/strong&gt; is a JavaScript plugin built on the jQuery library. It allows you to turn any textarea into a markup editor. HTML, Textile, Wiki Syntax, Markdown, BBcode or even your own markup system can be easily implemented.&lt;/p&gt;</textarea>
+			</p>
+		</div>
+
+		<p>Support the projet : <a href="http://markitup.jaysalvat.com/">Donate</a> | <a href="http://markitup.jaysalvat.com/">Contact</a></p>
+		<!-- LS 2010-05-06 13:42:12
+		  -- ----------------------
+		  -- If you want the transparent PNGs used in the toolbar to
+		  -- show up transparent in IE6, you need to use a little
+		  -- trickery, this is just one of may ways.
+		  -- 
+		  -- Conditional comments to server it up only to IE6,
+		  -- IE7+ support transparent/alpha PNGs (better).
+		  -->
+		<!--[if IE 6]>
+			<script type="text/javascript" language="javascript" src="DD_roundies_0.0.2a.js"></script>
+			<script>
+				DD_roundies.addRule('.markItUpButton a');
+			</script>
+		<![endif]-->
+	</body>
+</html>
