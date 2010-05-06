@@ -119,6 +119,7 @@
 .markdown .markItUpEditor	{background-image:url("images/bg-editor-markdown.png");}
 .textile .markItUpEditor	{background-image:url("images/bg-editor-textile.png");}
 .wiki .markItUpEditor		{background-image:url("images/bg-editor-wiki.png");}
+
 /* LS 2010-05-04 17:30:18
  * ----------------------
  * These are the button sprites, you no longer need a style.css for each set...
@@ -138,86 +139,48 @@
 	padding:0;
 	border:0;
 	}
+
 /* LS 2010-05-05 15:51:20
  * ----------------------
  * Remember to add the padding value of the above rule ".markItUpHeader ul a" to both horizontal and vertical positioning values
  * Obviously, if you change the value of the padding abve, you will need to recalculate here as well...
  */
-.mui-btn-a a					{background-position:3px 3px;
-	}
-.mui-btn-blockquote a				{background-position:3px -63px;
-	}
-.mui-btn-bug a					{background-position:3px -129px;
-	}
-.mui-btn-calculator a				{background-position:3px -195px;
-	}
-.mui-btn-calendar a				{background-position:3px -261px;
-	}
-.mui-btn-clean a				{background-position:3px -327px;
-	}
-.mui-btn-code a					{background-position:3px -393px;
-	}
-.mui-btn-colour a				{background-position:3px -459px;
-	}
-.mui-btn-del a					{background-position:3px -525px;
-	}
-.mui-btn-em a					{background-position:3px -591px;
-	}
-.mui-btn-email a				{background-position:3px -657px;
-	}
-.mui-btn-feed a					{background-position:3px -723px;
-	}
-.mui-btn-font-family a				{background-position:3px -789px;
-	}
-.markItUpHeader ul ul .mui-btn-font-family a	{background-position:3px -788px;
-	}   /* LS 2010-05-04 17:26:02 - +1px from above rule */
-.mui-btn-h1 a					{background-position:3px -855px;
-	}
-.mui-btn-h2 a					{background-position:3px -921px;
-	}
-.mui-btn-h3 a					{background-position:3px -987px;
-	}
-.mui-btn-h4 a					{background-position:3px -1053px;
-	}
-.mui-btn-h5 a					{background-position:3px -1119px;
-	}
-.mui-btn-h6 a					{background-position:3px -1185px;
-	}
-.mui-btn-htmltidyrepair a			{background-position:3px -1251px;
-	}
-.mui-btn-htmltidyreport a			{background-position:3px -1317px;
-	}
-.mui-btn-img a					{background-position:3px -1383px;
-	}
-.mui-btn-li a					{background-position:3px -1449px;
-	}
-.mui-btn-load a					{background-position:3px -1515px;
-	}
-.mui-btn-no-formatting a			{background-position:3px -1581px;
-	}
-.mui-btn-ol a					{background-position:3px -1647px;
-	}
-.mui-btn-p a					{background-position:3px -1713px;
-	}
-.mui-btn-save a					{background-position:3px -1729px;
-	}
-.mui-btn-sort a					{background-position:3px -1845px;
-	}
-.mui-btn-strong a				{background-position:3px -1911px;
-	}
-.mui-btn-table-col a				{background-position:-63px 3px;
-	}
-.mui-btn-table-row a				{background-position:-63px -63px;
-	}
-.mui-btn-table a				{background-position:-63px -129px;
-	}
-.mui-btn-tick a					{background-position:-63px -195px;
-	}
-.mui-btn-tinyurl a				{background-position:-63px -261px;
-	}
-.mui-btn-ul a					{background-position:-63px -327px;
-	}
-.mui-btn-underlined a				{background-position:-63px -393px;
-	}
-.mui-btn-url a					{background-position:-63px -459px;
-	}
+.mui-btn-a a					{background-position:3px 3px;}
+.mui-btn-blockquote a				{background-position:3px -63px;}
+.mui-btn-bug a					{background-position:3px -129px;}
+.mui-btn-calculator a				{background-position:3px -195px;}
+.mui-btn-calendar a				{background-position:3px -261px;}
+.mui-btn-clean a				{background-position:3px -327px;}
+.mui-btn-code a					{background-position:3px -393px;}
+.mui-btn-colour a				{background-position:3px -459px;}
+.mui-btn-del a					{background-position:3px -525px;}
+.mui-btn-em a					{background-position:3px -591px;}
+.mui-btn-email a				{background-position:3px -657px;}
+.mui-btn-feed a					{background-position:3px -723px;}
+.mui-btn-font-family a				{background-position:3px -789px;}
+.markItUpHeader ul ul .mui-btn-font-family a	{background-position:3px -788px;}   /* LS 2010-05-04 17:26:02 - +1px from above rule */
+.mui-btn-h1 a					{background-position:3px -855px;}
+.mui-btn-h2 a					{background-position:3px -921px;}
+.mui-btn-h3 a					{background-position:3px -987px;}
+.mui-btn-h4 a					{background-position:3px -1053px;}
+.mui-btn-h5 a					{background-position:3px -1119px;}
+.mui-btn-h6 a					{background-position:3px -1185px;}
+.mui-btn-htmltidyrepair a			{background-position:3px -1251px;}
+.mui-btn-htmltidyreport a			{background-position:3px -1317px;}
+.mui-btn-img a					{background-position:3px -1383px;}
+.mui-btn-li a					{background-position:3px -1449px;}
+.mui-btn-load a					{background-position:3px -1515px;}
+.mui-btn-no-formatting a			{background-position:3px -1581px;}
+.mui-btn-ol a					{background-position:3px -1647px;}
+.mui-btn-p a					{background-position:3px -1713px;}
+.mui-btn-save a					{background-position:3px -1729px;}
+.mui-btn-sort a					{background-position:3px -1845px;}
+.mui-btn-strong a				{background-position:3px -1911px;}
+.mui-btn-table-col a				{background-position:-63px 3px;}
+.mui-btn-table-row a				{background-position:-63px -63px;}
+.mui-btn-table a				{background-position:-63px -129px;}
+.mui-btn-tick a					{background-position:-63px -195px;}
+.mui-btn-tinyurl a				{background-position:-63px -261px;}
+.mui-btn-ul a					{background-position:-63px -327px;}
+.mui-btn-underlined a				{background-position:-63px -393px;}
+.mui-btn-url a					{background-position:-63px -459px;}
