@@ -163,26 +163,13 @@
  * This is useful in the testing environment to actually see that you are changing the button bar
  * Make sure you override this in other styles using - div.markItUpContainer .markItUpEditor {background-image:none;}
  */
-
 .bbcode .markItUpEditor,
-.xbbcode .markItUpEditor {
-	background-image:url(images/bg-editor-bbcode.png);
-}
-.dotclear .markItUpEditor {
-	background-image:url(images/bg-editor-dotclear.png);
-}
-.html .markItUpEditor {
-	background-image:url(images/bg-editor-html.png);
-}
-.markdown .markItUpEditor {
-	background-image:url(images/bg-editor-markdown.png);
-}
-.textile .markItUpEditor {
-	background-image:url(images/bg-editor-textile.png);
-}
-.wiki .markItUpEditor {
-	background-image:url(images/bg-editor-wiki.png);
-}
+.xbbcode .markItUpEditor	{background-image:url("images/bg-editor-bbcode.png");}
+.dotclear .markItUpEditor	{background-image:url("images/bg-editor-dotclear.png");}
+.html .markItUpEditor		{background-image:url("images/bg-editor-html.png)";}
+.markdown .markItUpEditor	{background-image:url("images/bg-editor-markdown.png");}
+.textile .markItUpEditor	{background-image:url("images/bg-editor-textile.png");}
+.wiki .markItUpEditor		{background-image:url("images/bg-editor-wiki.png");}
 
 /* LS 2010-05-04 17:30:18
  * ----------------------
