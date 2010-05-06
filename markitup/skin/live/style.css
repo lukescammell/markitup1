@@ -1,0 +1,148 @@
+/* -------------------------------------------------------------------
+// markItUp! Universal MarkUp Engine, JQuery plugin
+// By Jay Salvat - http://markitup.jaysalvat.com/
+// ------------------------------------------------------------------*/
+
+/* markitup skin live
+ * ------------------
+ * Filename:	style.css
+ * Skin name:	Live
+ * Description:	A Microsoft Live inspired skin.
+ * URL:		http://markitup.jaysalvat.com/downloads/demo.php?id=skins/live
+ * Authors:	Jay Salvat - http://markitup.jaysalvat.com/
+ * 		Luke Scammell - http://scammell.co.uk/
+ */
+.markItUp  {
+	background-color:#fff;
+	border:1px solid #3C769D;
+	padding:5px;
+	}
+.markItUp * {
+	margin:0;padding:0;
+	outline:none;
+	}
+.markItUp a:link,
+.markItUp a:visited {
+	color:#000;
+	text-decoration:none;
+	}
+.markItUp  {
+	width:690px;
+	margin:5px 0 5px 0;
+	}
+.markItUpContainer  {
+	width:690px;
+	font:11px Verdana, Arial, Helvetica, sans-serif;
+	background:transparent url("images/bg-container.png") repeat-x scroll left top;
+	border:0;
+	}
+.markItUpContainer .markItUpEditor {
+	font:12px "Consolas", "DejaVu Sans Mono", "Monaco", "Andale Mono", "Courier New", monospace;	/* LS 2010-05-06 10:10:55 - Courier is just so old... */
+	padding:5px;
+	margin:0 25px 0 25px;
+	border-top:1px dotted black;
+	width:636px;
+	padding:5px;
+	height:360px;
+	clear:both;display:block;
+	line-height:18px;
+	overflow:auto;
+	border:0 solid white;
+	background:transparent none;
+	color:#163774;
+	}
+.markItUpPreviewFrame	{
+	overflow:auto;
+	background-color:#fff;
+	width:99.9%;
+	height:350px;
+	margin:5px 0;
+	}
+.markItUpHeader {
+	width:670px;
+	padding:43px 0 0 25px;
+	height:27px;
+	background:url(images/bg-header.png);
+	}
+.markItUpFooter {
+	width:690px;height:20px;
+	padding-top:10px;
+	background-image:url(images/bg-footer.png);
+	}
+.markItUpResizeHandle {
+	overflow:hidden;
+	margin:0 auto 0 auto;
+	width:22px;height:6px;
+	background-image:url(images/handle.png);
+	cursor:n-resize;
+	}
+/***************************************************************************************/
+/* first row of buttons */
+.markItUpHeader ul li	{
+	list-style:none;
+	float:left;
+	position:relative;
+	}
+.markItUpHeader ul li:hover > ul{
+	display:block;
+	}
+.markItUpHeader ul .markItUpDropMenu {
+	background:transparent url(images/menu.png) no-repeat 115% 50%;
+	margin-right:5px;
+	}
+.markItUpHeader ul .markItUpDropMenu li {
+	margin-right:0;
+	}
+/* next rows of buttons */
+.markItUpHeader ul ul {
+	display:none;
+	position:absolute;
+	top:18px;left:0;	
+	background:#fff;
+	border:1px solid #000;
+	}
+.markItUpHeader ul ul li {
+	float:none;
+	border-bottom:1px solid #000;
+	}
+.markItUpHeader ul ul .markItUpDropMenu {
+	background:#fff url(images/submenu.png) no-repeat 100% 50%;
+	}
+.markItUpHeader ul .markItUpSeparator {
+	margin:0 10px;
+	width:1px;
+	height:16px;
+	overflow:hidden;
+	}
+.markItUpHeader ul ul .markItUpSeparator {
+	width:auto;height:1px;
+	margin:0;
+	}
+/* next rows of buttons */
+.markItUpHeader ul ul ul {
+	position:absolute;
+	top:-1px;left:150px;
+	}
+.markItUpHeader ul ul ul li {
+	float:none;
+	}
+.markItUpHeader ul a {
+	display:block;
+	width:16px;height:16px;
+	text-indent:-10000px;
+	background-repeat:no-repeat;
+	padding:3px;
+	margin:0;
+	}
+.markItUpHeader ul ul a {
+	display:block;
+	padding-left:0;
+	text-indent:0;
+	width:120px;
+	padding:5px 5px 5px 25px;
+	background-position:2px 50%;
+	}
+.markItUpHeader ul ul a:hover  {
+	color:#fff;
+	background-color:#3875D7;
+	}
