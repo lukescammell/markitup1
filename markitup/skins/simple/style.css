@@ -3,14 +3,14 @@
 // By Jay Salvat - http://markitup.jaysalvat.com/
 // ------------------------------------------------------------------*/
 
-/*	markitup skin simple
- *	--------------------
- *	Filename:		style.css
- *	Skin name:		Simple
- *	Description:	A simple, neutral skin that should fit into most designs
- *	URL:			http://markitup.jaysalvat.com/downloads/demo.php?id=skins/simple
- *	Authors:		Jay Salvat - http://markitup.jaysalvat.com/
- *					Luke Scammell - http://scammell.co.uk/
+/* markitup skin simple
+ * --------------------
+ * Filename:	style.css
+ * Skin name:	Simple
+ * Description:	A simple, neutral skin that should fit into most designs
+ * URL:		http://markitup.jaysalvat.com/downloads/demo.php?id=skins/simple
+ * Authors:	Jay Salvat - http://markitup.jaysalvat.com/
+ * 		Luke Scammell - http://scammell.co.uk/
  */
 .markItUp * {
 	margin:0px; padding:0px;
@@ -24,7 +24,7 @@
 .markItUp  {
 	width:700px;
 	margin:5px 0 5px 0;
-	border:0;					/* LS 2010-05-05 13:18:07 - Added to enable on-the-fly style switching and prevent the default style showing through */	
+	border:0;			/* LS 2010-05-05 13:18:07 - Added to enable on-the-fly style switching and prevent the default style showing through */	
 }
 .markItUpContainer  {
 	font:11px Verdana, Arial, Helvetica, sans-serif;
@@ -39,13 +39,13 @@
 	clear:both; display:block;
 	line-height:18px;
 	overflow:auto;
-	border:0;					/* LS 2010-05-05 13:18:07 - Added to enable on-the-fly style switching and prevent the default style showing through */
+	border:0;			/* LS 2010-05-05 13:18:07 - Added to enable on-the-fly style switching and prevent the default style showing through */
 	border-width:1px;
 	border-color:#ddd;
 	border-style:solid;
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
-	border-radius:4px;			/* LS 2010-05-06 10:12:04 - something nice and subtle to fit into current design themes */
+	border-radius:4px;		/* LS 2010-05-06 10:12:04 - something nice and subtle to fit into current design themes */
 }
 div.markItUpContainer .markItUpEditor {
 	background-image:none;		/* LS 2010-05-05 13:26:14 - Added to enable on-the-fly style switching and prevent the default style showing through */

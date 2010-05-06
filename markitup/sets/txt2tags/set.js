@@ -11,7 +11,7 @@
 // Feel free to add more tags
 // -------------------------------------------------------------------
 myTxt2tagsSettings = {
-    nameSpace:			"txt2tags", // Useful to prevent multi-instances CSS conflict
+	nameSpace:		"txt2tags", // Useful to prevent multi-instances CSS conflict
 	previewParserPath:	'', // path to your Txt2tags parser
 	onShiftEnter:		{keepDefault:false, replaceWith:'\n\n'},
 	markupSet: [

@@ -12,9 +12,9 @@
 // Feel free to do anything with this.
 // -------------------------------------------------------------------
 myTexySettings = {
-    nameSpace:			"texy", // Useful to prevent multi-instances CSS conflict
+	nameSpace:		"texy", // Useful to prevent multi-instances CSS conflict
 	previewParserPath:	'', // path to your Texy parser
-	onShiftEnter:	    {keepDefault:false, replaceWith:'\n\n'},
+	onShiftEnter:		{keepDefault:false, replaceWith:'\n\n'},
 	markupSet: [	
 		{name:'Heading 1', key:'1', closeWith:function(markItUp) { return miu.texyTitle(markItUp, '#') }, placeHolder:'Your title here...', className:'mui-btn-h1'},
 		{name:'Heading 2', key:'2', closeWith:function(markItUp) { return miu.texyTitle(markItUp, '*') }, placeHolder:'Your title here...', className:'mui-btn-h2'},

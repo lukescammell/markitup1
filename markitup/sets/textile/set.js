@@ -11,7 +11,7 @@
 // Feel free to add more tags
 // -------------------------------------------------------------------
 myTextileSettings = {
-    nameSpace:			"textile", // Useful to prevent multi-instances CSS conflict
+	nameSpace:		"textile", // Useful to prevent multi-instances CSS conflict
 	previewParserPath:	'', // path to your Textile parser
 	onShiftEnter:		{keepDefault:false, replaceWith:'\n\n'},
 	markupSet: [
