@@ -1,0 +1,205 @@
+/* -------------------------------------------------------------------
+// markItUp! Universal MarkUp Engine, JQuery plugin
+// By Jay Salvat - http://markitup.jaysalvat.com/
+// ------------------------------------------------------------------*/
+
+/* Default skinmarkitup skin markitup
+ * ----------------------
+ * Filename:	markitup.skin.default.css
+ * Skin name:	default
+ * Description:	A good set of defaults that the other skins can use as a base.
+ * URL:		N/A
+ * Authors:	Luke Scammell - http://scammell.co.uk/
+ */
+
+.markItUp,
+.markItUpContainer,
+.markItUpHeader,
+.markItUpHeader ul,
+.markItUpHeader li,
+.markItUpEditor,
+.markItUpFooter {
+	background:none;
+	border:0;
+	margin:0;
+	outline:none;
+	padding:0;
+	width:auto;
+}
+.markItUp a,
+.markItUp a:visited {
+	color:#000;
+	text-decoration:none;
+}
+.markItUp  {
+	margin:1em 0;			/* Override to give the editor a little vertical space */
+	width:700px;
+}
+.markItUpEditor,
+.markItUpPreviewFrame {
+	background-color:#fff;		/* Specific override of above rule */
+	clear:both;			/* Position between the header (button bar) and footer */
+	display:block;
+	font:normal normal normal 12px/1.5em Consolas, "DejaVu Sans Mono", Monaco, "Andale Mono", "Courier New", Courier, monospace;	/* LS 2010-05-06 10:10:55 - Courier is just so old... */
+	overflow:auto;			/* Scroll when needed */
+	padding:5px;			/* Put some space between the text and the edge of the textarea */
+	width:690px;			/* 690px = 700px - padding */
+	height:290px;			/* 290px = 300px - padding */
+	/* Border styling */
+	border:1px #ddd solid;		/* Subtle border for the textarea */
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	-khtml-border-radius:4px;
+	border-radius:4px;		/* LS 2010-05-06 10:12:04 - something nice and subtle to fit into contemporary design themes */
+}
+.markItUpResizeHandle {			/* LS 2010-05-07 11:09:15 - maybe ditch this and use auto-grow? */
+	overflow:hidden;
+	width:22px;
+	height:5px;
+	margin:0 auto;
+	background-image:url("i/handle.png");
+	cursor:n-resize;
+}
+.markItUpPreviewFrame {
+	height:350px;
+	margin:5px 0;
+}
+
+/******************************************************************************/
+/* Buttons */
+.markItUpHeader li {
+	float:left;
+	list-style:none;
+	margin-bottom:5px;
+	position:relative;
+}
+.markItUpHeader .markItUpSeparator {
+	margin:0 10px;
+	width:1px;
+	height:16px;
+	overflow:hidden;
+	background-color:#ccc;
+	top:3px;			/* Get in line with the buttons - match the padding-top value of ".markItUpHeader ul a". */
+	cursor:default;			/* LS 2010-05-07 11:19:10 - Prevents annoying cursor styling flash when moving over the buttons. */
+}
+li.markItUpDropMenu,
+li.markItUpDropMenu:hover {		/* Display menu indicator overlay icon */
+	background:url("i/menu.png") no-repeat scroll 115% 50% transparent;
+	margin-right:5px;
+}
+
+/******************************************************************************/
+/* Dropdown Menu */
+.markItUpDropMenu:hover ul {		/* Show menu on mouse hover. */
+	display:block;
+	-moz-box-shadow:	3px 3px 11px rgba(0,0,0,.63);
+	-webkit-box-shadow:	3px 3px 11px rgba(0,0,0,.63);
+	box-shadow:		3px 3px 11px rgba(0,0,0,.63);	/* LS 2010-05-07 17:29:15 - Why not eh? :D */
+}
+.markItUpDropMenu ul {
+	background-color:#fff;
+	border:1px #ccc solid;
+	display:none;
+	position:absolute;
+	top:18px;
+	left:0;
+}
+.markItUpDropMenu li {
+	margin-bottom:0;
+	width:120px;
+	float:none;
+	border-bottom:1px #ccc solid;
+}
+.markItUpDropMenu li:last-child {
+	border-bottom:0;
+}
+
+/* Button Styling
+ * LS 2010-05-07 16:02:59
+ * ----------------------
+ * These are the button sprites, you no longer need a style.css for each set...
+ * You can always override the look of the buttons in a skin.
+ * If you are sticking with 16px icons, then you only need to override the one rule, eg:
+ * .markItUpButton a {background-image:url("i/mui-btn-sprite.png");}
+ * 
+ * Dead useful: http://spritegen.website-performance.org/
+ */
+.markItUpButton a {
+	background-image:url("i/mui-btn-sprite.png");	/* Yeah, this line here! */
+	background-repeat:no-repeat;
+	display:block;
+	height:16px;				/* Matches the size of the icons. */
+	margin:0;
+	padding:3px;				/* Make the button click area a bit bigger - this value needs to be added to the sprite positioning values below. */
+	text-indent:-10000px;			/* Hide the text. */
+	width:16px;				/* Matches the size of the icons. */
+}
+.markItUpButton a:hover {			/* Visual feedback of being in a button's clickable area. */
+	background-color:#ccc;
+	-moz-border-radius:	3px;
+	-webkit-border-radius:	3px;
+	-khtml-border-radius:	3px;
+	border-radius:		3px;
+	color:#000;				/* Gets inherited by the dropdown menu text as well (below). */
+}
+.markItUpDropMenu .markItUpButton a {		/* Dropdown menu styling */
+	padding:4px 5px 5px 25px;
+	text-indent:0;
+	width:auto;
+}
+.markItUpDropMenu .markItUpButton a:hover {	/* Don't want rounded corners in the menus. */
+	background-color:#ddd;
+	-moz-border-radius:	0;
+	-webkit-border-radius:	0;
+	-khtml-border-radius:	0;
+	border-radius:		0;
+}
+
+/* Icon Positioning
+ * ----------------------
+ * LS 2010-05-07 15:58:56
+ * ----------------------
+ * Remember to add the padding value of the above rule ".markItUpButton a" to both horizontal and vertical positioning values
+ * If you change the value of the padding above, you will need to recalculate here as well...
+ * 
+ * If you edit the mui-btn-sprite.png file directly, you may not need to change anything here.
+ */
+.mui-btn-a a					{background-position:3px 3px;}
+.mui-btn-blockquote a				{background-position:3px -63px;}
+.mui-btn-bug a					{background-position:3px -129px;}
+.mui-btn-calculator a				{background-position:3px -195px;}
+.mui-btn-calendar a				{background-position:3px -261px;}
+.mui-btn-clean a				{background-position:3px -327px;}
+.mui-btn-code a					{background-position:3px -393px;}
+.mui-btn-colour a				{background-position:3px -459px;}
+.mui-btn-del a					{background-position:3px -525px;}
+.mui-btn-em a					{background-position:3px -591px;}
+.mui-btn-email a				{background-position:3px -657px;}
+.mui-btn-feed a					{background-position:3px -723px;}
+.mui-btn-font-family a				{background-position:3px -789px;}
+.markItUpHeader ul ul .mui-btn-font-family a	{background-position:3px -787px;}   /* LS 2010-05-04 17:26:02 - +2px from above rule */
+.mui-btn-h1 a					{background-position:3px -855px;}
+.mui-btn-h2 a					{background-position:3px -921px;}
+.mui-btn-h3 a					{background-position:3px -987px;}
+.mui-btn-h4 a					{background-position:3px -1053px;}
+.mui-btn-h5 a					{background-position:3px -1119px;}
+.mui-btn-h6 a					{background-position:3px -1185px;}
+.mui-btn-htmltidyrepair a			{background-position:3px -1251px;}
+.mui-btn-htmltidyreport a			{background-position:3px -1317px;}
+.mui-btn-img a					{background-position:3px -1383px;}
+.mui-btn-li a					{background-position:3px -1449px;}
+.mui-btn-load a					{background-position:3px -1515px;}
+.mui-btn-no-formatting a			{background-position:3px -1581px;}
+.mui-btn-ol a					{background-position:3px -1647px;}
+.mui-btn-p a					{background-position:3px -1713px;}
+.mui-btn-save a					{background-position:3px -1729px;}
+.mui-btn-sort a					{background-position:3px -1845px;}
+.mui-btn-strong a				{background-position:3px -1911px;}
+.mui-btn-table-col a				{background-position:-63px 3px;}
+.mui-btn-table-row a				{background-position:-63px -63px;}
+.mui-btn-table a				{background-position:-63px -129px;}
+.mui-btn-tick a					{background-position:-63px -195px;}
+.mui-btn-tinyurl a				{background-position:-63px -261px;}
+.mui-btn-ul a					{background-position:-63px -327px;}
+.mui-btn-underlined a				{background-position:-63px -393px;}
+.mui-btn-url a					{background-position:-63px -459px;}
