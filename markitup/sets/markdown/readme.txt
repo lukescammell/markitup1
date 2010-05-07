@@ -1,6 +1,9 @@
 Markup language: 
 	Markdown
 
+URL:
+	http://daringfireball.net/projects/markdown/syntax
+
 Description:
 	A basic Markdown markup set with Headings, Bold, Italic, Picture, Link, List, Quotes, Code, Preview button.
 
