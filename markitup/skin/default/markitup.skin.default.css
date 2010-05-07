@@ -177,7 +177,7 @@ li.markItUpDropMenu:hover {		/* Display menu indicator overlay icon */
 .mui-btn-email a				{background-position:3px -657px;}
 .mui-btn-feed a					{background-position:3px -723px;}
 .mui-btn-font-family a				{background-position:3px -789px;}
-.markItUpHeader ul ul .mui-btn-font-family a	{background-position:3px -787px;}   /* LS 2010-05-04 17:26:02 - +2px from above rule */
+.markItUpHeader ul ul .mui-btn-font-family a	{background-position:3px -787px;}	/* LS 2010-05-04 17:26:02 - +2px from above rule */
 .mui-btn-h1 a					{background-position:3px -855px;}
 .mui-btn-h2 a					{background-position:3px -921px;}
 .mui-btn-h3 a					{background-position:3px -987px;}

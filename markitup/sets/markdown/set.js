@@ -21,7 +21,7 @@ myMarkdownSettings = {
 		{name:'Heading 4', key:'4', openWith:'#### ', placeHolder:'Your title here...', className:'mui-btn-h4'},
 		{name:'Heading 5', key:'5', openWith:'##### ', placeHolder:'Your title here...', className:'mui-btn-h5'},
 		{name:'Heading 6', key:'6', openWith:'###### ', placeHolder:'Your title here...', className:'mui-btn-h6'},
-		{separator:'---------------' },		
+		{separator:'---------------' },
 		{name:'Bold', key:'B', openWith:'**', closeWith:'**', className:'mui-btn-strong'},
 		{name:'Italic', key:'I', openWith:'_', closeWith:'_', className:'mui-btn-em'},
 		{separator:'---------------'},

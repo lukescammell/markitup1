@@ -15,7 +15,7 @@ myTexySettings = {
 	nameSpace:		"texy", // Useful to prevent multi-instances CSS conflict
 	previewParserPath:	'', // path to your Texy parser
 	onShiftEnter:		{keepDefault:false, replaceWith:'\n\n'},
-	markupSet: [	
+	markupSet: [
 		{name:'Heading 1', key:'1', closeWith:function(markItUp) { return miu.texyTitle(markItUp, '#') }, placeHolder:'Your title here...', className:'mui-btn-h1'},
 		{name:'Heading 2', key:'2', closeWith:function(markItUp) { return miu.texyTitle(markItUp, '*') }, placeHolder:'Your title here...', className:'mui-btn-h2'},
 		{name:'Heading 3', key:'3', closeWith:function(markItUp) { return miu.texyTitle(markItUp, '=') }, placeHolder:'Your title here...', className:'mui-btn-h3'},
@@ -32,7 +32,7 @@ myTexySettings = {
 		{separator:'---------------' },
 		{name:'Quotes', openWith:'> ', className:'mui-btn-blockquote'},
 		{name:'Code block/Code in-line', openWith:'(!(/---[![Language:!:html]!]\n|!|`)!)', closeWith:'(!(\n\\---\n|!|`)!)', className:'mui-btn-code'},
-		{name:'Texy off', closeWith:'\'\'', openWith:'\'\'', className:'mui-btn-no-formatting', placeHolder:'No texty! in here!'},	
+		{name:'Texy off', closeWith:'\'\'', openWith:'\'\'', className:'mui-btn-no-formatting', placeHolder:'No texty! in here!'},
  		{separator:'---------------' },	
 		{name:'Preview', call:'preview', className:'mui-btn-tick'}
 	]
