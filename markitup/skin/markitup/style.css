@@ -65,7 +65,7 @@
 .bbcode .markItUpEditor,
 .xbbcode .markItUpEditor	{background-image:url("i/bg-editor-bbcode.png");}
 .dotclear .markItUpEditor	{background-image:url("i/bg-editor-dotclear.png");}
-.html .markItUpEditor		{background-image:url("i/bg-editor-html.png)";}
+.html .markItUpEditor		{background-image:url("i/bg-editor-html.png");}
 .markdown .markItUpEditor	{background-image:url("i/bg-editor-markdown.png");}
 .textile .markItUpEditor	{background-image:url("i/bg-editor-textile.png");}
 .wiki .markItUpEditor		{background-image:url("i/bg-editor-wiki.png");}
