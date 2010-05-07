@@ -4,7 +4,7 @@
 // Copyright (C) 2008 Jay Salvat
 // http://markitup.jaysalvat.com/
 // ----------------------------------------------------------------------------
-// Html tags
+// HTML tags
 // http://en.wikipedia.org/wiki/html
 // ----------------------------------------------------------------------------
 // Basic set. Feel free to add more tags
