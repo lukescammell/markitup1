@@ -7,13 +7,14 @@
 		<link rel="stylesheet" type="text/css" href="images/style.css" />
 		<!-- jQuery -->
 		<!-- Just in case you want to run it locally... -->
-		<!-- <script type="text/javascript" language="javascript" src="jquery-1.4.2.min.js"></script> -->
-		<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+		<script type="text/javascript" language="javascript" src="jquery-1.4.2.min.js"></script>
+		<!-- <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> -->
 		<!-- markItUp! -->
 		<script type="text/javascript" language="javascript" src="markitup/jquery.markitup.js"></script>
 		<!-- markItUp! toolbar settings -->
 		<script type="text/javascript" language="javascript" src="markitup/sets/default/set.js"></script>
 		<script type="text/javascript" language="javascript" src="markitup/sets/bbcode/set.js"></script>
+		<script type="text/javascript" language="javascript" src="markitup/sets/css/set.js"></script>
 		<script type="text/javascript" language="javascript" src="markitup/sets/dotclear/set.js"></script>
 		<script type="text/javascript" language="javascript" src="markitup/sets/html/set.js"></script>
 		<script type="text/javascript" language="javascript" src="markitup/sets/markdown/set.js"></script>
@@ -21,6 +22,7 @@
 		<script type="text/javascript" language="javascript" src="markitup/sets/texy/set.js"></script>
 		<script type="text/javascript" language="javascript" src="markitup/sets/txt2tags/set.js"></script>
 		<script type="text/javascript" language="javascript" src="markitup/sets/xbbcode/set.js"></script>
+		<script type="text/javascript" language="javascript" src="markitup/sets/wiki/set.js"></script>
 		<!-- Stylesheet Switcher - not required for general use -->
 		<!-- http://webdevcodex.com/how-to-switch-to-an-alternate-stylesheet-using-jquery/ -->
 		<!-- LS 2010-05-05 12:55:11 -->
@@ -90,6 +92,9 @@
 						case 'bbcode':
 							$('#multiSet').markItUp(myBbcodeSettings);
 							break;
+						case 'css':
+							$('#multiSet').markItUp(myCssSettings);
+							break;
 						case 'dotclear':
 							$('#multiSet').markItUp(myDotclearSettings);
 							break;
@@ -110,6 +115,9 @@
 							break;
 						case 'xbbcode':
 							$('#multiSet').markItUp(myXbbcodeSettings);
+							break;
+						case 'wiki':
+							$('#multiSet').markItUp(myWikiSettings);
 							break;
 					}
 					return false;
@@ -161,6 +169,7 @@
 			<ul id="switcher">
 				<li class="default"><a href="#">Default (HTML)</a></li>
 				<li class="bbcode currentSet"><a href="#">BBCode</a></li>
+				<li class="css"><a href="#">CSS</a></li>
 				<li class="dotclear"><a href="#">dotclear</a></li>
 				<li class="html"><a href="#">HTML</a></li>
 				<li class="markdown"><a href="#">Markdown</a></li>
@@ -168,6 +177,7 @@
 				<li class="texy"><a href="#">texy</a></li>
 				<li class="txt2tags"><a href="#">txt2tags</a></li>
 				<li class="xbbcode"><a href="#">xbbcode</a></li>
+				<li class="wiki"><a href="#">wiki</a></li>
 				<li class="remove"><a href="#">Remove markItUp!</a></li>
 			</ul>
 			
