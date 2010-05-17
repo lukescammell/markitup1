@@ -57,7 +57,8 @@
 	width:22px;
 	height:5px;
 	margin:0 auto;
-	background-image:url("i/handle.png");
+	background-image:url("i/mui-btn-sprite.png");
+	background-position:0 0;
 	cursor:n-resize;
 }
 .markItUpPreviewFrame {
@@ -82,10 +83,10 @@
 	top:3px;			/* Get in line with the buttons - match the padding-top value of ".markItUpHeader ul a". */
 	cursor:default;			/* LS 2010-05-07 11:19:10 - Prevents annoying cursor styling flash when moving over the buttons. */
 }
+/* Display menu indicator overlay icon */
 li.markItUpDropMenu,
-li.markItUpDropMenu:hover {		/* Display menu indicator overlay icon */
-	background:url("i/menu.png") no-repeat scroll 115% 50% transparent;
-	margin-right:5px;
+li.markItUpDropMenu:hover {
+	background:url("i/mui-btn-sprite.png") no-repeat scroll 19px -119px transparent;
 }
 
 /******************************************************************************/
@@ -126,6 +127,7 @@ li.markItUpDropMenu:hover {		/* Display menu indicator overlay icon */
  */
 .markItUpButton a {
 	background-image:url("i/mui-btn-sprite.png");	/* Yeah, this line here! */
+	/* background-image:url("i/mui-btn-sprite-8bit-bg-ededed.png"); */	/* Smaller file size, 8bit option */
 	background-repeat:no-repeat;
 	display:block;
 	height:16px;				/* Matches the size of the icons. */
@@ -134,25 +136,30 @@ li.markItUpDropMenu:hover {		/* Display menu indicator overlay icon */
 	text-indent:-10000px;			/* Hide the text. */
 	width:16px;				/* Matches the size of the icons. */
 }
-.markItUpButton a:hover {			/* Visual feedback of being in a button's clickable area. */
+.markItUpDropMenu a {
+	padding-right:6px;			/* Extra padding for the dropdown indicator */
+}
+/* Visual feedback of being in a button's clickable area. */
+.markItUpButton:hover,
+li.markItUpDropMenu:hover {
 	background-color:#ccc;
 	-moz-border-radius:	3px;
 	-webkit-border-radius:	3px;
 	-khtml-border-radius:	3px;
 	border-radius:		3px;
-	color:#000;				/* Gets inherited by the dropdown menu text as well (below). */
 }
-.markItUpDropMenu .markItUpButton a {		/* Dropdown menu styling */
+/* Dropdown menu styling */
+.markItUpDropMenu .markItUpButton a {
 	padding:4px 5px 5px 25px;
 	text-indent:0;
 	width:auto;
 }
-.markItUpDropMenu .markItUpButton a:hover {	/* Don't want rounded corners in the menus. */
+.markItUpDropMenu .markItUpButton:hover {
 	background-color:#ddd;
 	-moz-border-radius:	0;
 	-webkit-border-radius:	0;
 	-khtml-border-radius:	0;
-	border-radius:		0;
+	border-radius:0;			/* Don't want rounded corners in the menus. */
 }
 
 /* Icon Positioning
@@ -164,57 +171,60 @@ li.markItUpDropMenu:hover {		/* Display menu indicator overlay icon */
  * 
  * If you edit the mui-btn-sprite.png file directly, you may not need to change anything here.
  */
-.mui-btn-a a					{background-position:3px 3px;}
-.mui-btn-blockquote a				{background-position:3px -63px;}
-.mui-btn-bug a					{background-position:3px -129px;}
-.mui-btn-calculator a				{background-position:3px -195px;}
-.mui-btn-calendar a				{background-position:3px -261px;}
-.mui-btn-clean a				{background-position:3px -327px;}
-.mui-btn-code a					{background-position:3px -393px;}
-.mui-btn-colour a				{background-position:3px -429px;}
-.mui-btn-css a					{background-position:3px -525px;}
-.mui-btn-del a					{background-position:3px -591px;}
-.mui-btn-em a					{background-position:3px -657px;}
-.mui-btn-email a				{background-position:3px -723px;}
-.mui-btn-feed a					{background-position:3px -789px;}
-.mui-btn-font-family a				{background-position:3px -855px;}
-.markItUpHeader ul ul .mui-btn-font-family a	{background-position:3px -853px;}	/* LS 2010-05-04 17:26:02 - +2px from above rule */
-.mui-btn-h1 a					{background-position:3px -921px;}
-.mui-btn-h2 a					{background-position:3px -987px;}
-.mui-btn-h3 a					{background-position:3px -1053px;}
-.mui-btn-h4 a					{background-position:3px -1119px;}
-.mui-btn-h5 a					{background-position:3px -1185px;}
-.mui-btn-h6 a					{background-position:3px -1251px;}
-.mui-btn-htmltidyrepair a			{background-position:3px -1317px;}
-.mui-btn-htmltidyreport a			{background-position:3px -1383px;}
-.mui-btn-img a					{background-position:3px -1449px;}
-.mui-btn-li a					{background-position:3px -1515px;}
-.mui-btn-load a					{background-position:3px -1581px;}
-.mui-btn-no-formatting a			{background-position:3px -1647px;}
-.mui-btn-ol a					{background-position:3px -1713px;}
-.mui-btn-p a					{background-position:3px -1779px;}
-.mui-btn-save a					{background-position:3px -1845px;}
-.mui-btn-sort a					{background-position:3px -1911px;}
-.mui-btn-strong a				{background-position:-63px 3px;}
-.mui-btn-table-col a				{background-position:-63px -63px;}
-.mui-btn-table-row a				{background-position:-63px -129px;}
-.mui-btn-table a				{background-position:-63px -195px;}
-.mui-btn-tag a					{background-position:-63px -261px;}
-.mui-btn-text-align-center a			{background-position:-63px -327px;}
-.mui-btn-text-align-justify a			{background-position:-63px -393px;}
-.mui-btn-text-align-left a			{background-position:-63px -459px;}
-.mui-btn-text-align-right a			{background-position:-63px -525px;}
-.mui-btn-text-indent a				{background-position:-63px -591px;}
-.mui-btn-text-letterspacing a			{background-position:-63px -657px;}
-.mui-btn-text-linespacing a			{background-position:-63px -723px;}
-.mui-btn-text-lowercase a			{background-position:-63px -789px;}
-.mui-btn-text-padding-bottom a			{background-position:-63px -855px;}
-.mui-btn-text-padding-left a			{background-position:-63px -921px;}
-.mui-btn-text-padding-right a			{background-position:-63px -987px;}
-.mui-btn-text-padding-top a			{background-position:-63px -1053px;}
-.mui-btn-text-uppercase a			{background-position:-63px -1119px;}
-.mui-btn-tick a					{background-position:-63px -1185px;}
-.mui-btn-tinyurl a				{background-position:-63px -1251px;}
-.mui-btn-ul a					{background-position:-63px -1317px;}
-.mui-btn-underline a				{background-position:-63px -1383px;}
-.mui-btn-url a					{background-position:-63px -1449px;}
+.mui-btn-handle a				{background-position:3px 3px;}
+.mui-btn-menu a					{background-position:3px -63px;}
+.mui-btn-submenu a				{background-position:3px -129px;}
+.mui-btn-a a					{background-position:3px -195px;}
+.mui-btn-blockquote a				{background-position:3px -261px;}
+.mui-btn-bug a					{background-position:3px -327px;}
+.mui-btn-calculator a				{background-position:3px -393px;}
+.mui-btn-calendar a				{background-position:3px -459px;}
+.mui-btn-clean a				{background-position:3px -525px;}
+.mui-btn-code a					{background-position:3px -591px;}
+.mui-btn-colour a				{background-position:3px -657px;}
+.mui-btn-css a					{background-position:3px -723px;}
+.mui-btn-del a					{background-position:3px -789px;}
+.mui-btn-em a					{background-position:3px -855px;}
+.mui-btn-email a				{background-position:3px -921px;}
+.mui-btn-feed a					{background-position:3px -987px;}
+.mui-btn-font-family a				{background-position:3px -1053px;}
+.markItUpHeader ul ul .mui-btn-font-family a	{background-position:3px -1050px;}	/* LS 2010-05-04 17:26:02 - +3px from above rule */
+.mui-btn-h1 a					{background-position:3px -1119px;}
+.mui-btn-h2 a					{background-position:3px -1185px;}
+.mui-btn-h3 a					{background-position:3px -1251px;}
+.mui-btn-h4 a					{background-position:3px -1317px;}
+.mui-btn-h5 a					{background-position:3px -1383px;}
+.mui-btn-h6 a					{background-position:3px -1449px;}
+.mui-btn-htmltidyrepair a			{background-position:3px -1515px;}
+.mui-btn-htmltidyreport a			{background-position:3px -1581px;}
+.mui-btn-img a					{background-position:3px -1647px;}
+.mui-btn-li a					{background-position:3px -1713px;}
+.mui-btn-load a					{background-position:3px -1779px;}
+.mui-btn-no-formatting a			{background-position:3px -1845px;}
+.mui-btn-ol a					{background-position:3px -1911px;}
+.mui-btn-p a					{background-position:3px -1977px;}
+.mui-btn-save a					{background-position:3px -2043px;}
+.mui-btn-sort a					{background-position:3px -2109px;}
+.mui-btn-strong a				{background-position:3px -2175px;}
+.mui-btn-table-col a				{background-position:3px -2241px;}
+.mui-btn-table-row a				{background-position:3px -2307px;}
+.mui-btn-table a				{background-position:3px -2373px;}
+.mui-btn-tag a					{background-position:3px -2439px;}
+.mui-btn-text-align-center a			{background-position:3px -2505px;}
+.mui-btn-text-align-justify a			{background-position:3px -2571px;}
+.mui-btn-text-align-left a			{background-position:3px -2637px;}
+.mui-btn-text-align-right a			{background-position:3px -2703px;}
+.mui-btn-text-indent a				{background-position:3px -2769px;}
+.mui-btn-text-letterspacing a			{background-position:3px -2835px;}
+.mui-btn-text-lineheight a			{background-position:3px -2901px;}
+.mui-btn-text-lowercase a			{background-position:3px -2967px;}
+.mui-btn-text-padding-bottom a			{background-position:3px -3033px;}
+.mui-btn-text-padding-left a			{background-position:3px -3099px;}
+.mui-btn-text-padding-right a			{background-position:3px -3165px;}
+.mui-btn-text-padding-top a			{background-position:3px -3231px;}
+.mui-btn-text-uppercase a			{background-position:3px -3297px;}
+.mui-btn-tick a					{background-position:3px -3363px;}
+.mui-btn-tinyurl a				{background-position:3px -3431px;}
+.mui-btn-ul a					{background-position:3px -3495px;}
+.mui-btn-underline a				{background-position:3px -3561px;}
+.mui-btn-url a					{background-position:3px -3627px;}
