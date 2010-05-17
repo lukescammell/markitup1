@@ -100,6 +100,7 @@ li.markItUpDropMenu:hover {
 .markItUpDropMenu ul {
 	background-color:#fff;
 	border:1px #ccc solid;
+	border-bottom:0;		/* Prevents double thick border at the bottom of the dropdown due to the rule in .markItUpDropMenu li */
 	display:none;
 	position:absolute;
 	top:18px;
