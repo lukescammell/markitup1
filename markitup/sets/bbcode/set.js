@@ -21,11 +21,12 @@ myBbcodeSettings = {
 		{name:'Link', key:'L', openWith:'[url=[![Url]!]]', closeWith:'[/url]', placeHolder:'Your text to link here...', className:'mui-btn-a'},
 		{separator:'---------------'},
 		{name:'Size', key:'S', openWith:'[size=[![Text size]!]]', closeWith:'[/size]', className:'mui-btn-font-family',
-		dropMenu :[
-			{name:'Big', openWith:'[size=200]', closeWith:'[/size]', className:'mui-btn-font-family'},
-			{name:'Normal', openWith:'[size=100]', closeWith:'[/size]', className:'mui-btn-font-family'},
-			{name:'Small', openWith:'[size=50]', closeWith:'[/size]', className:'mui-btn-font-family'}
-		]},
+			dropMenu :[
+				{name:'Big', openWith:'[size=200]', closeWith:'[/size]', className:'mui-btn-font-family'},
+				{name:'Normal', openWith:'[size=100]', closeWith:'[/size]', className:'mui-btn-font-family'},
+				{name:'Small', openWith:'[size=50]', closeWith:'[/size]', className:'mui-btn-font-family'}
+			]
+		},
 		{separator:'---------------'},
 		{name:'Bulleted list', openWith:'[list]\n', closeWith:'\n[/list]', className:'mui-btn-ul'},
 		{name:'Numeric list', openWith:'[list=[![Starting number]!]]\n', closeWith:'\n[/list]', className:'mui-btn-ol'},
