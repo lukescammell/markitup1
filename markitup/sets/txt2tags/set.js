@@ -23,7 +23,7 @@ myTxt2tagsSettings = {
 		{separator:'---------------'},
 		{name:'Bold', key:'B', openWith:'**', closeWith:'**', className:'mui-btn-strong'},
 		{name:'Italic', key:'I', openWith:'//', closeWith:'//', className:'mui-btn-em'},
-		{name:'Underline', key:'U', openWith:'__', closeWith:'__', className:'mui-btn-underlined'},
+		{name:'Underline', key:'U', openWith:'__', closeWith:'__', className:'mui-btn-underline'},
 		{name:'Strike', key:'S', openWith:'--', closeWith:'--', className:'mui-btn-del'},
 		{separator:'---------------'},
 		{name:'Bullet list', openWith:'- ', className:'mui-btn-ul'},
