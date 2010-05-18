@@ -75,9 +75,9 @@
 			// apply the computed path to ~/
 			function localize(data, inText) {
 				if (inText) {
-					return 	data.replace(/("|')~\//g, "$1"+options.root);
+					return data.replace(/("|')~\//g, "$1"+options.root);
 				}
-				return 	data.replace(/^~\//, options.root);
+				return data.replace(/^~\//, options.root);
 			}
 
 			// init and build editor
@@ -164,9 +164,9 @@
 							return false;
 						}).mousedown(function() {
 							if (button.call) {
-								eval(button.call)();
+								eval(button.call)(); // eval is evil
 							}
-							setTimeout(function() { markup(button) },1);
+							setTimeout(function() { markup(button); },1);
 							return false;
 						}).hover(function() {
 								$('> ul', this).show();
@@ -231,10 +231,10 @@
 
 			// build block to insert
 			function build(string) {
-				openWith 	= prepare(clicked.openWith);
+				openWith = prepare(clicked.openWith);
 				placeHolder = prepare(clicked.placeHolder);
 				replaceWith = prepare(clicked.replaceWith);
-				closeWith 	= prepare(clicked.closeWith);
+				closeWith = prepare(clicked.closeWith);
 				if (replaceWith !== "") {
 					block = openWith + replaceWith + closeWith;
 				} else if (selection === '' && placeHolder !== '') {
@@ -256,16 +256,16 @@
 				hash = clicked = button;
 				get();
 
-				$.extend(hash, {	line:"", 
-						 			root:options.root,
-									textarea:textarea, 
-									selection:(selection||''), 
-									caretPosition:caretPosition,
-									ctrlKey:ctrlKey, 
-									shiftKey:shiftKey, 
-									altKey:altKey
-								}
-							);
+				$.extend(hash,	{	line:"", 
+							root:options.root,
+							textarea:textarea, 
+							selection:(selection||''), 
+							caretPosition:caretPosition,
+							ctrlKey:ctrlKey, 
+							shiftKey:shiftKey, 
+							altKey:altKey
+						}
+				);
 				// callbacks before insertion
 				prepare(options.beforeInsert);
 				prepare(clicked.beforeInsert);
@@ -369,7 +369,7 @@
 			function set(start, len) {
 				if (textarea.createTextRange){
 					// quick fix to make it work on Opera 9.5
-					if ($.browser.opera && $.browser.version >= 9.5 && len == 0) {
+					if ($.browser.opera && $.browser.version >= 9.5 && len === 0) {
 						return false;
 					}
 					range = textarea.createTextRange();
@@ -439,7 +439,7 @@
 
 			// refresh Preview window
 			function refreshPreview() {
- 				renderPreview();
+				renderPreview();
 			}
 
 			function renderPreview() {		
@@ -469,7 +469,7 @@
 			function writeInPreview(data) {
 				if (previewWindow.document) {			
 					try {
-						sp = previewWindow.document.documentElement.scrollTop
+						sp = previewWindow.document.documentElement.scrollTop;
 					} catch(e) {
 						sp = 0;
 					}	
@@ -515,7 +515,7 @@
 						}
 					}
 					if (e.keyCode === 9) { // Tab key
-						if (shiftKey == true || ctrlKey == true || altKey == true) { // Thx Dr Floob.
+						if (shiftKey === true || ctrlKey === true || altKey === true) { // Thx Dr Floob.
 							return false; 
 						}
 						if (caretOffset !== -1) {
