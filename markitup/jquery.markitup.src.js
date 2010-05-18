@@ -29,30 +29,30 @@
 		var options, ctrlKey, shiftKey, altKey;
 		ctrlKey = shiftKey = altKey = false;
 
-		options = {	id:						'',
-					nameSpace:				'',
-					root:					'',
+		options = {	id:					'',
+					nameSpace:			'',
+					root:				'',
 					previewInWindow:		'', // 'width=800, height=600, resizable=yes, scrollbars=yes'
 					previewAutoRefresh:		true,
 					previewPosition:		'after',
-					previewTemplatePath:	'~/templates/preview.html',
+					previewTemplatePath:		'~/templates/preview.html',
 					previewParserPath:		'',
 					previewParserVar:		'data',
 					resizeHandle:			true,
 					beforeInsert:			'',
 					afterInsert:			'',
-					onEnter:				{},
+					onEnter:			{},
 					onShiftEnter:			{},
 					onCtrlEnter:			{},
-					onTab:					{},
-					markupSet:			[	{ /* set */ } ]
+					onTab:				{},
+					markupSet:			[ { /* set */ } ]
 				};
 		$.extend(options, settings, extraSettings);
 
 		// compute markItUp! path
 		if (!options.root) {
 			$('script').each(function(a, tag) {
-				miuScript = $(tag).get(0).src.match(/(.*)jquery\.markitup(\.pack)?\.js$/);
+				miuScript = $(tag).get(0).src.match(/(.*)jquery\.markitup(\.(min|pack|src))?\.js$/); // support standard minified and src naming schemes as well - LS 2010-05-18 11:04:59
 				if (miuScript !== null) {
 					options.root = miuScript[1];
 				}
