@@ -65,6 +65,10 @@
 	height:350px;
 	margin:5px 0;
 }
+.markItUpPreviewFrame html,
+.markItUpPreviewFrame body {
+	border:0;
+}
 
 /******************************************************************************/
 /* Buttons */

@@ -415,7 +415,7 @@
 					if (options.previewInWindow) {
 						previewWindow = window.open('', 'preview', options.previewInWindow);
 					} else {
-						iFrame = $('<iframe class="markItUpPreviewFrame"></iframe>');
+						iFrame = $('<iframe class="markItUpPreviewFrame" frameBorder="0"></iframe>'); // Get rid of the iframe border in IE6 - http://bit.ly/c735I3
 						if (options.previewPosition == 'after') {
 							iFrame.insertAfter(footer);
 						} else {
