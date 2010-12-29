@@ -57,7 +57,7 @@
 	width:22px;
 	height:5px;
 	margin:0 auto;
-	background-image:url("i/mui-btn-sprite.png");
+	background-image:url("../../icons/default/i/markitup.icons.default.16px.png");
 	background-position:0 0;
 	cursor:n-resize;
 }
@@ -90,7 +90,7 @@
 /* Display menu indicator overlay icon */
 li.markItUpDropMenu,
 li.markItUpDropMenu:hover {
-	background:url("i/mui-btn-sprite.png") no-repeat scroll 19px -119px transparent;
+	background:url("../../icons/default/i/markitup.icons.default.16px.png") no-repeat scroll 19px -119px transparent;
 }
 
 /******************************************************************************/
@@ -126,13 +126,13 @@ li.markItUpDropMenu:hover {
  * These are the button sprites, you no longer need a style.css for each set...
  * You can always override the look of the buttons in a skin.
  * If you are sticking with 16px icons, then you only need to override the one rule, eg:
- * .markItUpButton a {background-image:url("i/mui-btn-sprite.png");}
+ * .markItUpButton a {background-image:url("../../icons/default/i/markitup.icons.default.16px.png");}
  * 
  * Dead useful: http://spritegen.website-performance.org/
  */
 .markItUpButton a {
-	background-image:url("i/mui-btn-sprite.png");	/* Yeah, this line here! */
-	/* background-image:url("i/mui-btn-sprite-8bit-bg-ededed.png"); */	/* Smaller file size, 8bit option */
+	background-image:url("../../icons/default/i/markitup.icons.default.16px.png");	/* Yeah, this line here! */
+	/* background-image:url("../../icons/default/i/mui-btn-sprite-8bit-bg-ededed.png"); */	/* Smaller file size, 8bit option */
 	background-repeat:no-repeat;
 	display:block;
 	height:16px;				/* Matches the size of the icons. */
@@ -174,7 +174,7 @@ li.markItUpDropMenu:hover {
  * Remember to add the padding value of the above rule ".markItUpButton a" to both horizontal and vertical positioning values
  * If you change the value of the padding above, you will need to recalculate here as well...
  * 
- * If you edit the mui-btn-sprite.png file directly, you may not need to change anything here.
+ * If you edit the markitup.icons.default.16px.png file directly, you may not need to change anything here.
  */
 .mui-btn-handle a				{background-position:3px 3px;}
 .mui-btn-menu a					{background-position:3px -63px;}

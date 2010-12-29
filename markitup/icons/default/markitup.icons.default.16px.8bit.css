@@ -1,0 +1,17 @@
+/* ===================================================================
+// markItUp! Universal MarkUp Engine, JQuery plugin
+// By Jay Salvat - http://markitup.jaysalvat.com/
+// ===================================================================*/
+
+/* Default Icons
+ * =============
+ * Filename:	markitup.icons.default.16px.8bit.css
+ * Icons name:	default
+ * Description:	A clean and versatile set of toolbar icons - 8bit flavour, smaller and great for IE6.
+ * URL:		N/A
+ * Authors:	Luke Scammell - http://scammell.co.uk/
+ */
+
+.markItUpButton a {
+	background-image:url("i/markitup.icons.default.16px.8bit.bg-ededed.png")!important; /* Smaller file size, 8bit option */
+}
