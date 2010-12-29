@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------------
 // markItUp! Universal MarkUp Engine, JQuery plugin
-// v 1.1.7.x
+// v 1.1.9.x
 // Dual licensed under the MIT and GPL licenses.
 // ----------------------------------------------------------------------------
 // Copyright (C) 2007-2010 Jay Salvat
@@ -162,6 +162,8 @@
 							return false;
 						}).click(function() {
 							return false;
+						}).bind("focusin", function(){
+							$$.focus();
 						}).mousedown(function() {
 							if (button.call) {
 								eval(button.call)(); // eval is evil
@@ -231,16 +233,21 @@
 
 			// build block to insert
 			function build(string) {
-				openWith = prepare(clicked.openWith);
-				placeHolder = prepare(clicked.placeHolder);
-				replaceWith = prepare(clicked.replaceWith);
-				closeWith = prepare(clicked.closeWith);
+				var openWith 	= prepare(clicked.openWith);
+				var placeHolder = prepare(clicked.placeHolder);
+				var replaceWith = prepare(clicked.replaceWith);
+				var closeWith 	= prepare(clicked.closeWith);
 				if (replaceWith !== "") {
 					block = openWith + replaceWith + closeWith;
 				} else if (selection === '' && placeHolder !== '') {
 					block = openWith + placeHolder + closeWith;
 				} else {
-					block = openWith + (string||selection) + closeWith;
+					string = string || selection;						
+					if (string.match(/ $/)) {
+						block = openWith + string.replace(/ $/, '') + closeWith + ' ';
+					} else {
+						block = openWith + string + closeWith;
+					}
 				}
 				return {	block:block, 
 							openWith:openWith, 
@@ -291,6 +298,7 @@
 					string = build(selection);
 					start = caretPosition + string.openWith.length;
 					len = string.block.length - string.openWith.length - string.closeWith.length;
+					len = len - (string.block.match(/ $/) ? 1 : 0);
 					len -= fixIeBug(string.block);
 				} else if (shiftKey === true) {
 					string = build(selection);
@@ -350,7 +358,7 @@
 			// Substract linefeed in IE
 			function fixIeBug(string) {
 				if ($.browser.msie) {
-					return string.length - string.replace(/\r*/g, '').length;
+					return string.length - string.replace(/\r/g, '').length;
 				}
 				return 0;
 			}
@@ -369,7 +377,7 @@
 			function set(start, len) {
 				if (textarea.createTextRange){
 					// quick fix to make it work on Opera 9.5
-					if ($.browser.opera && $.browser.version >= 9.5 && len === 0) {
+					if ($.browser.opera && $.browser.version >= 9.5 && len == 0) {
 						return false;
 					}
 					range = textarea.createTextRange();
@@ -390,21 +398,21 @@
 
 				scrollPosition = textarea.scrollTop;
 				if (document.selection) {
-					selection = document.selection.createRange().text;
+					selection = document.selection;
 					if ($.browser.msie) { // ie
-						var range = document.selection.createRange(), rangeCopy = range.duplicate();
-						rangeCopy.moveToElementText(textarea);
-						caretPosition = -1;
-						while(rangeCopy.inRange(range)) {
-							rangeCopy.moveStart('character');
-							caretPosition ++;
-						}
+						var range = selection.createRange();
+						var stored_range = range.duplicate();
+						stored_range.moveToElementText(textarea);
+						stored_range.setEndPoint('EndToEnd', range);
+						var s = stored_range.text.length - range.text.length;
+						caretPosition = s - (textarea.value.substr(0, s).length - textarea.value.substr(0, s).replace(/\r/g, '').length);
+						selection = range.text;
 					} else { // opera
 						caretPosition = textarea.selectionStart;
 					}
 				} else { // gecko & webkit
 					caretPosition = textarea.selectionStart;
-					selection = textarea.value.substring(caretPosition, textarea.selectionEnd);  // Thx Marius G.
+					selection = textarea.value.substring(caretPosition, textarea.selectionEnd);
 				} 
 				return selection;
 			}
@@ -414,6 +422,9 @@
 				if (!previewWindow || previewWindow.closed) {
 					if (options.previewInWindow) {
 						previewWindow = window.open('', 'preview', options.previewInWindow);
+						$(window).unload(function() {
+							previewWindow.close();
+						});
 					} else {
 						iFrame = $('<iframe class="markItUpPreviewFrame" frameBorder="0"></iframe>'); // LS 2010-05-18 09:44:29 remove iframe border in ie http://bit.ly/c735I3
 						if (options.previewPosition == 'after') {
@@ -424,7 +435,6 @@
 						previewWindow = iFrame[iFrame.length - 1].contentWindow || frame[iFrame.length - 1];
 					}
 				} else if (altKey === true) {
-					// Thx Stephen M. Redd for the IE8 fix
 					if (iFrame) {
 						iFrame.remove();
 					} else {
@@ -434,6 +444,9 @@
 				}
 				if (!options.previewAutoRefresh) {
 					refreshPreview(); 
+				}
+				if (options.previewInWindow) {
+					previewWindow.focus();
 				}
 			}
 
@@ -445,22 +458,26 @@
 			function renderPreview() {		
 				var phtml;
 				if (options.previewParserPath !== '') {
-					$.ajax( {
+					$.ajax({
 						type: 'POST',
+						dataType: 'text',
+						global: false,
 						url: options.previewParserPath,
 						data: options.previewParserVar+'='+encodeURIComponent($$.val()),
 						success: function(data) {
 							writeInPreview( localize(data, 1) ); 
 						}
-					} );
+					});
 				} else {
 					if (!template) {
-						$.ajax( {
+						$.ajax({
 							url: options.previewTemplatePath,
+							dataType: 'text',
+							global: false,
 							success: function(data) {
 								writeInPreview( localize(data, 1).replace(/<!-- content -->/g, $$.val()) );
 							}
-						} );
+						});
 					}
 				}
 				return false;
@@ -477,9 +494,6 @@
 					previewWindow.document.write(data);
 					previewWindow.document.close();
 					previewWindow.document.documentElement.scrollTop = sp;
-				}
-				if (options.previewInWindow) {
-					previewWindow.focus();
 				}
 			}
 			
@@ -515,7 +529,7 @@
 						}
 					}
 					if (e.keyCode === 9) { // Tab key
-						if (shiftKey === true || ctrlKey === true || altKey === true) { // Thx Dr Floob.
+						if (shiftKey == true || ctrlKey == true || altKey == true) {
 							return false; 
 						}
 						if (caretOffset !== -1) {
