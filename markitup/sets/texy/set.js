@@ -16,25 +16,25 @@ myTexySettings = {
 	previewParserPath:	'', // path to your Texy parser
 	onShiftEnter:		{keepDefault:false, replaceWith:'\n\n'},
 	markupSet: [
-		{name:'Heading 1', key:'1', closeWith:function(markItUp) { return miu.texyTitle(markItUp, '#') }, placeHolder:'Your title here...', className:'mui-btn-h1'},
-		{name:'Heading 2', key:'2', closeWith:function(markItUp) { return miu.texyTitle(markItUp, '*') }, placeHolder:'Your title here...', className:'mui-btn-h2'},
-		{name:'Heading 3', key:'3', closeWith:function(markItUp) { return miu.texyTitle(markItUp, '=') }, placeHolder:'Your title here...', className:'mui-btn-h3'},
-		{name:'Heading 4', key:'4', closeWith:function(markItUp) { return miu.texyTitle(markItUp, '-') }, placeHolder:'Your title here...', className:'mui-btn-h4'},
+		{name:'Heading 1', key:'1', closeWith:function(markItUp) { return miu.texyTitle(markItUp, '#') }, placeHolder:'Your title here...', className:'miu-btn-h1'},
+		{name:'Heading 2', key:'2', closeWith:function(markItUp) { return miu.texyTitle(markItUp, '*') }, placeHolder:'Your title here...', className:'miu-btn-h2'},
+		{name:'Heading 3', key:'3', closeWith:function(markItUp) { return miu.texyTitle(markItUp, '=') }, placeHolder:'Your title here...', className:'miu-btn-h3'},
+		{name:'Heading 4', key:'4', closeWith:function(markItUp) { return miu.texyTitle(markItUp, '-') }, placeHolder:'Your title here...', className:'miu-btn-h4'},
 		{separator:'---------------' },
-		{name:'Bold', key:'B', closeWith:'**', openWith:'**', className:'mui-btn-strong', placeHolder:'Your text here...'},
-		{name:'Italic', key:'I', closeWith:'*', openWith:'*', className:'mui-btn-em', placeHolder:'Your text here...'},
+		{name:'Bold', key:'B', closeWith:'**', openWith:'**', className:'miu-btn-strong', placeHolder:'Your text here...'},
+		{name:'Italic', key:'I', closeWith:'*', openWith:'*', className:'miu-btn-em', placeHolder:'Your text here...'},
 		{separator:'---------------' },
-		{name:'Bulleted list', openWith:'- ', className:'mui-btn-ul'},
-		{name:'Numeric list', openWith:function(markItUp) { return markItUp.line+'. '; }, className:'mui-btn-ol'},
+		{name:'Bulleted list', openWith:'- ', className:'miu-btn-ul'},
+		{name:'Numeric list', openWith:function(markItUp) { return markItUp.line+'. '; }, className:'miu-btn-ol'},
 		{separator:'---------------' },
-		{name:'Picture', openWith:'[* ', closeWith:' (!(.([![Alt text]!]))!) *]', placeHolder:'[![Url:!:http://]!]', className:'mui-btn-img'},
-		{name:'Link', openWith:'"', closeWith:'":[![Url:!:http://]!]', placeHolder:'Your text to link...', className:'mui-btn-a' },
+		{name:'Picture', openWith:'[* ', closeWith:' (!(.([![Alt text]!]))!) *]', placeHolder:'[![Url:!:http://]!]', className:'miu-btn-img'},
+		{name:'Link', openWith:'"', closeWith:'":[![Url:!:http://]!]', placeHolder:'Your text to link...', className:'miu-btn-a' },
 		{separator:'---------------' },
-		{name:'Quotes', openWith:'> ', className:'mui-btn-blockquote'},
-		{name:'Code block/Code in-line', openWith:'(!(/---[![Language:!:html]!]\n|!|`)!)', closeWith:'(!(\n\\---\n|!|`)!)', className:'mui-btn-code'},
-		{name:'Texy off', closeWith:'\'\'', openWith:'\'\'', className:'mui-btn-no-formatting', placeHolder:'No texty! in here!'},
+		{name:'Quotes', openWith:'> ', className:'miu-btn-blockquote'},
+		{name:'Code block/Code in-line', openWith:'(!(/---[![Language:!:html]!]\n|!|`)!)', closeWith:'(!(\n\\---\n|!|`)!)', className:'miu-btn-code'},
+		{name:'Texy off', closeWith:'\'\'', openWith:'\'\'', className:'miu-btn-no-formatting', placeHolder:'No texty! in here!'},
  		{separator:'---------------' },	
-		{name:'Preview', call:'preview', className:'mui-btn-tick'}
+		{name:'Preview', call:'preview', className:'miu-btn-tick'}
 	]
 }
 
