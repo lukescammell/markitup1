@@ -21,12 +21,12 @@
 	color:#000;
 	text-decoration:none;
 }
-.markItUp  {
+.markItUp {
 	width:700px;
 	margin:5px 0 5px 0;
 	border:0;			/* LS 2010-05-05 13:18:07 - Added to enable on-the-fly style switching and prevent the default style showing through */	
 }
-.markItUpContainer  {
+.markItUpContainer {
 	font:11px Verdana, Arial, Helvetica, sans-serif;
 	background:none;
 	border:0;
@@ -142,7 +142,7 @@ div.markItUpContainer .markItUpEditor {
 	padding:5px 5px 5px 25px;
 	background-position:2px 50%;
 }
-.markItUpHeader ul ul a:hover  {
+.markItUpHeader ul ul a:hover {
 	color:#fff;
 	background-color:#000;
 }
