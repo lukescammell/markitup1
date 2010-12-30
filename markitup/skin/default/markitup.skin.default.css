@@ -1,10 +1,10 @@
-/* -------------------------------------------------------------------
+/* ===================================================================
 // markItUp! Universal MarkUp Engine, JQuery plugin
 // By Jay Salvat - http://markitup.jaysalvat.com/
-// ------------------------------------------------------------------*/
+// ==================================================================*/
 
-/* Default skinmarkitup skin markitup
- * ----------------------
+/* Default markitup skin
+ * =====================
  * Filename:	markitup.skin.default.css
  * Skin name:	default
  * Description:	A good set of defaults that the other skins can use as a base.
@@ -122,7 +122,7 @@ li.markItUpDropMenu:hover {
 
 /* Button Styling
  * LS 2010-05-07 16:02:59
- * ----------------------
+ * ======================
  * These are the button sprites, you no longer need a style.css for each set...
  * You can always override the look of the buttons in a skin.
  * If you are sticking with 16px icons, then you only need to override the one rule, eg:
@@ -148,10 +148,10 @@ li.markItUpDropMenu:hover {
 .markItUpButton:hover,
 li.markItUpDropMenu:hover {
 	background-color:#ccc;
-	-moz-border-radius:	3px;
-	-webkit-border-radius:	3px;
-	-khtml-border-radius:	3px;
-	border-radius:		3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius:3px;
+	border-radius:3px;
 }
 /* Dropdown menu styling */
 .markItUpDropMenu .markItUpButton a {
@@ -161,16 +161,16 @@ li.markItUpDropMenu:hover {
 }
 .markItUpDropMenu .markItUpButton:hover {
 	background-color:#ddd;
-	-moz-border-radius:	0;
-	-webkit-border-radius:	0;
-	-khtml-border-radius:	0;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	-khtml-border-radius:0;
 	border-radius:0;			/* Don't want rounded corners in the menus. */
 }
 
 /* Icon Positioning
- * ----------------------
+ * ======================
  * LS 2010-05-07 15:58:56
- * ----------------------
+ * ======================
  * Remember to add the padding value of the above rule ".markItUpButton a" to both horizontal and vertical positioning values
  * If you change the value of the padding above, you will need to recalculate here as well...
  * 

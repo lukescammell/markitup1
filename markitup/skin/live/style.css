@@ -1,10 +1,10 @@
-/* -------------------------------------------------------------------
+/* ===================================================================
 // markItUp! Universal MarkUp Engine, JQuery plugin
 // By Jay Salvat - http://markitup.jaysalvat.com/
-// ------------------------------------------------------------------*/
+// ==================================================================*/
 
 /* markitup skin live
- * ------------------
+ * ==================
  * Filename:	style.css
  * Skin name:	Live
  * Description:	A Microsoft Live inspired skin.
@@ -62,18 +62,18 @@
 	width:670px;
 	padding:43px 0 0 25px;
 	height:27px;
-	background:url(images/bg-header.png);
+	background:url("images/bg-header.png");
 	}
 .markItUpFooter {
 	width:690px;height:20px;
 	padding-top:10px;
-	background-image:url(images/bg-footer.png);
+	background-image:url("images/bg-footer.png");
 	}
 .markItUpResizeHandle {
 	overflow:hidden;
 	margin:0 auto 0 auto;
 	width:22px;height:6px;
-	background-image:url(images/handle.png);
+	background-image:url("images/handle.png");
 	cursor:n-resize;
 	}
 /***************************************************************************************/
@@ -87,7 +87,7 @@
 	display:block;
 	}
 .markItUpHeader ul .markItUpDropMenu {
-	background:transparent url(images/menu.png) no-repeat 115% 50%;
+	background:transparent url("images/menu.png") no-repeat 115% 50%;
 	margin-right:5px;
 	}
 .markItUpHeader ul .markItUpDropMenu li {
@@ -106,7 +106,7 @@
 	border-bottom:1px solid #000;
 	}
 .markItUpHeader ul ul .markItUpDropMenu {
-	background:#fff url(images/submenu.png) no-repeat 100% 50%;
+	background:#fff url("images/submenu.png") no-repeat 100% 50%;
 	}
 .markItUpHeader ul .markItUpSeparator {
 	margin:0 10px;

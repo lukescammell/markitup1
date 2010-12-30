@@ -1,10 +1,10 @@
-/* -------------------------------------------------------------------
+/* ===================================================================
 // markItUp! Universal MarkUp Engine, JQuery plugin
 // By Jay Salvat - http://markitup.jaysalvat.com/
-// ------------------------------------------------------------------*/
+// ==================================================================*/
 
 /* markitup skin markitup
- * ----------------------
+ * ======================
  * Filename:	style.css
  * Skin name:	markItUp!
  * Description:	The official markItUp! skin
@@ -14,7 +14,7 @@
  */
 
 /* LS 2010-05-07 17:04:07
- * ----------------------
+ * ======================
  * This stylesheet is designed to use markitup.skin.default.css as a base
  * and override where needed.
  * 
@@ -57,8 +57,8 @@
 
 /***************************************************************************************/
 /* LS 2010-05-05 13:28:18
- * ----------------------
- * Textarea background image.
+ * ======================
+ * Text area background image.
  * This is useful in the testing environment to actually see that you are changing the button bar
  * Make sure you override this in other styles using - div.markItUpContainer .markItUpEditor {background-image:none;}
  */
