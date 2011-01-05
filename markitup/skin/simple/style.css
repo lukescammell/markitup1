@@ -76,13 +76,13 @@ div.markItUpContainer .markItUpEditor {
 .markItUpFooter {
 	width:100%;
 }
-.markItUpResizeHandle {
+.markItUpResizeHandle {			/* LS 2010-05-07 11:09:15 - maybe ditch this and use auto-grow? */
 	overflow:hidden;
 	width:22px;
 	height:5px;
-	margin-left:auto;
-	margin-right:auto;
-	background-image:url("images/handle.png");
+	margin:0 auto;
+	background-image:url("../../icons/default/i/markitup.icons.default.16px.png");
+	background-position:0 0;
 	cursor:n-resize;
 }
 /***************************************************************************************/
@@ -95,9 +95,9 @@ div.markItUpContainer .markItUpEditor {
 .markItUpHeader ul li:hover > ul{
 	display:block;
 }
-.markItUpHeader ul .markItUpDropMenu {
-	background:transparent url("images/menu.png") no-repeat 115% 50%;
-	margin-right:5px;
+li.markItUpDropMenu,
+li.markItUpDropMenu:hover {
+	background:url("../../icons/default/i/markitup.icons.default.16px.png") no-repeat scroll 19px -119px transparent;
 }
 .markItUpHeader ul .markItUpDropMenu li {
 	margin-right:0px;
