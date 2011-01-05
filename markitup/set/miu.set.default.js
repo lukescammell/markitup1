@@ -18,9 +18,12 @@ http://markitup.jaysalvat.com/
 
 miu_set_default = {
 	nameSpace:		"default", // Useful to prevent multi-instances CSS conflict
+	miu_skin:		"default",
+	miu_icons:		"famfamfam",
+	miu_icons_size:		"16",
 	onShiftEnter:		{keepDefault:false, replaceWith:'<br />\n'},
 	onCtrlEnter:		{keepDefault:false, openWith:'\n<p>', closeWith:'</p>'},
-	onTab:			{keepDefault:false, replaceWith:'    '},
+	onTab:			{keepDefault:false, replaceWith:'	'},
 	markupSet: [
 		{name:'Bold', key:'B', openWith:'(!(<strong>|!|<b>)!)', closeWith:'(!(</strong>|!|</b>)!)', className:'miu-btn-strong'},
 		{name:'Italic', key:'I', openWith:'(!(<em>|!|<i>)!)', closeWith:'(!(</em>|!|</i>)!)', className:'miu-btn-em'},
@@ -33,3 +36,13 @@ miu_set_default = {
 		{name:'Preview',  call:'preview', className:'miu-btn-tick'}
 	]
 }
+
+/* LS 2011-01-05 17:20:41
+ * ======================
+ * 
+ * Bah, how do I get this gumpf out of here and into the main MIU JS?
+ */
+
+$('head').append('<link rel="stylesheet" type="text/css" href="markitup/skin/miu.skin.'+miu_set_default.miu_skin+'.css" />');
+$('head').append('<link rel="stylesheet" type="text/css" href="markitup/icons/miu.icons.'+miu_set_default.miu_icons+'.'+miu_set_default.miu_icons_size+'px.css" />');
+$('head').append('<!--[if IE 6]><link rel="stylesheet" type="text/css" href="markitup/icons/miu.icons.'+miu_set_default.miu_icons+'.'+miu_set_default.miu_icons_size+'px.8bit.css" /><![endif]-->');

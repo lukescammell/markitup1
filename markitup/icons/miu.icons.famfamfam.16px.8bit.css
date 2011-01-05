@@ -1,0 +1,20 @@
+/* ===================================================================
+// markItUp! Universal MarkUp Engine, JQuery plugin
+// © Jay Salvat - http://markitup.jaysalvat.com/
+// ===================================================================*/
+
+/* famfamfam icons
+ * ===============
+ * Filename:	miu.icons.famfamfam.16px.8bit.css
+ * Icons name:	famfamfam
+ * Description:	A clean and versatile set of toolbar icons from famfam - 8bit flavour, smaller and great for IE6.
+ * URL:		http://www.famfamfam.com/lab/icons/
+ * Authors:	Luke Scammell - http://scammell.co.uk/
+ */
+
+/* Display menu indicator overlay icon */
+.markItUpButton a
+li.markItUpDropMenu,
+li.markItUpDropMenu:hover {
+	background-image:url("miu.icons.famfamfam.16px.8bit.bg-ededed.png")!important; /* Smaller file size, 8bit option */
+}
