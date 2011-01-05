@@ -1,17 +1,31 @@
-/* ===================================================================
-// markItUp! Universal MarkUp Engine, JQuery plugin
-// By Jay Salvat - http://markitup.jaysalvat.com/
-// ==================================================================*/
+/*
+# markItUp!
+## Universal MarkUp Engine, jQuery plugin
 
-/* markitup skin simple
- * ====================
- * Filename:	style.css
- * Skin name:	Simple
- * Description:	A simple, neutral skin that should fit into most designs
- * URL:		http://markitup.jaysalvat.com/downloads/demo.php?id=skins/simple
- * Authors:	Jay Salvat - http://markitup.jaysalvat.com/
- * 		Luke Scammell - http://scammell.co.uk/
- */
+Copyright © 2008 [Jay Salvat](http://markitup.jaysalvat.com/)
+
+## Skin name: Simple
+ - miu.skin.simple.css
+
+## Description
+ - A simple, neutral skin that should fit into most designs.
+
+## URL
+ - <http://markitup.jaysalvat.com/downloads/demo.php?id=skins/simple>
+
+#### Author
+ - Jay Salvat
+ - <http://jaysalvat.com/>
+
+### Contributors
+ - Luke Scammell
+ - <http://scammell.co.uk/>
+
+## Install
+ 1. Download the zip file
+ 2. Unzip it in your markItUp! `skin` folder
+ 3. Modify your CSS link to point at this skin
+*/
 .markItUp * {
 	margin:0px; padding:0px;
 	outline:none;

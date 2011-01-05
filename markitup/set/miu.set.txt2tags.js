@@ -1,16 +1,26 @@
-// -------------------------------------------------------------------
-// markItUp!
-// -------------------------------------------------------------------
-// Copyright (C) 2009 Florent Gallaire <fgallaire@gmail.com>  
-// Copyright (C) 2008 Jay Salvat
-// http://markitup.jaysalvat.com/
-// -------------------------------------------------------------------
-// Txt2tags tags example
-// http://txt2tags.sourceforge.net/markup.html
-// -------------------------------------------------------------------
-// Feel free to add more tags
-// -------------------------------------------------------------------
-myTxt2tagsSettings = {
+/*
+# markItUp!
+
+Copyright (C) 2008 Jay Salvat
+http://markitup.jaysalvat.com/
+
+## Markup language: txt2tags <http://txt2tags.sourceforge.net/markup.html>
+
+## Description
+ - A basic Txt2tags markup set with Headings, Bold, Italic, Underline, Strike, Picture, Link, Lists, Quote, Code, Raw, Preview button.
+ - Feel free to add more tags.
+
+ #### Author
+ - Copyright (C) 2009 Florent Gallaire
+ - <fgallaire@gmail.com>
+
+## Install
+ 1. Download the zip file
+ 2. Unzip it in your markItUp! sets folder
+ 3. Modify your JS link to point at this set.js
+*/
+
+miu_set_txt2tags = {
 	nameSpace:		"txt2tags", // Useful to prevent multi-instances CSS conflict
 	previewParserPath:	'', // path to your Txt2tags parser
 	onShiftEnter:		{keepDefault:false, replaceWith:'\n\n'},

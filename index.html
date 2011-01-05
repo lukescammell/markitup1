@@ -11,13 +11,13 @@
 		<![endif]-->
 
 		<!-- jQuery -->
-		<!-- Just in case you want to run it locally... (it's quicker for local development). -->
+		<!-- Just in case you want to run it locally... (it's quicker for local development when constantly clearing the cache). -->
 		<script type="text/javascript" src="jquery-1.4.4.min.js"></script>
 		<!-- Otherwise it's a good idea to use the Google AJAX APIs CDN, just uncomment this line below and remove the one above. -->
 		<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> -->
 
 		<!-- markItUp! skin - ALWAYS LOAD THIS FIRST, then if you want another skin, load that after -->
-		<link rel="stylesheet" type="text/css" href="markitup/skin/default/markitup.skin.default.css" />
+		<link rel="stylesheet" type="text/css" href="markitup/skin/miu.skin.default.css" />
 		<!-- eg. uncomment the next line if you just wanted to use the markItUp style -->
 		<!-- <link rel="stylesheet" type="text/css" href="markitup/skin/markitup/style.css" /> -->
 
@@ -83,7 +83,7 @@
 		<!-- markItUp! -->
 		<script type="text/javascript" src="markitup/jquery.markitup.min.js"></script>
 		<!-- markItUp! toolbar settings -->
-		<script type="text/javascript" src="markitup/sets/default/set.js"></script>
+		<script type="text/javascript" src="markitup/set/miu.set.default.js"></script>
 		<script type="text/javascript">
 			<!--
 			$(document).ready(function() {
@@ -93,22 +93,22 @@
 				 * Add markItUp! to your textarea in one line
 				 * $('textarea').markItUp( { Settings }, { OptionalExtraSettings } );
 				 */
-				$('#markItUp').markItUp(myDefaultSettings);
+				$('#markItUp').markItUp(miu_set_default);
 			});
 			-->
 		</script>
 		<!-- ALL JAVASCRIPT BENEATH IS OPTIONAL, FOR EXAMPLE PURPOSES ONLY -->
 		<!-- OPTIONAL: other markItUp! toolbar settings -->
-		<script type="text/javascript" src="markitup/sets/bbcode/set.js"></script>
-		<script type="text/javascript" src="markitup/sets/css/set.js"></script>
-		<script type="text/javascript" src="markitup/sets/dotclear/set.js"></script>
-		<script type="text/javascript" src="markitup/sets/html/set.js"></script>
-		<script type="text/javascript" src="markitup/sets/markdown/set.js"></script>
-		<script type="text/javascript" src="markitup/sets/textile/set.js"></script>
-		<script type="text/javascript" src="markitup/sets/texy/set.js"></script>
-		<script type="text/javascript" src="markitup/sets/txt2tags/set.js"></script>
-		<script type="text/javascript" src="markitup/sets/xbbcode/set.js"></script>
-		<script type="text/javascript" src="markitup/sets/wiki/set.js"></script>
+		<script type="text/javascript" src="markitup/set/miu.set.bbcode.js"></script>
+		<script type="text/javascript" src="markitup/set/miu.set.css.js"></script>
+		<script type="text/javascript" src="markitup/set/miu.set.dotclear.js"></script>
+		<script type="text/javascript" src="markitup/set/miu.set.html.js"></script>
+		<script type="text/javascript" src="markitup/set/miu.set.markdown.js"></script>
+		<script type="text/javascript" src="markitup/set/miu.set.textile.js"></script>
+		<script type="text/javascript" src="markitup/set/miu.set.texy.js"></script>
+		<script type="text/javascript" src="markitup/set/miu.set.txt2tags.js"></script>
+		<script type="text/javascript" src="markitup/set/miu.set.xbbcode.js"></script>
+		<script type="text/javascript" src="markitup/set/miu.set.wiki.js"></script>
 		<!-- OPTIONAL: Stylesheet Switcher
 		   * =============================
 		   * http://webdevcodex.com/how-to-switch-to-an-alternate-stylesheet-using-jquery/
@@ -137,7 +137,7 @@
 						$('#markItUp').markItUpRemove();
 						$('span', this).text("get markItUp! back");
 					} else {
-						$('#markItUp').markItUp(myDefaultSettings);
+						$('#markItUp').markItUp(miu_set_default);
 						$('span', this).text("remove markItUp!");
 					}
 					return false;
@@ -156,37 +156,37 @@
 						$('#markItUp').markItUpRemove();
 						switch(newSet) {
 							case 'default':
-								$('#markItUp').markItUp(myDefaultSettings);
+								$('#markItUp').markItUp(miu_set_default);
 								break;
 							case 'bbcode':
-								$('#markItUp').markItUp(myBbcodeSettings);
+								$('#markItUp').markItUp(miu_set_bbcode);
 								break;
 							case 'css':
-								$('#markItUp').markItUp(myCssSettings);
+								$('#markItUp').markItUp(miu_set_css);
 								break;
 							case 'dotclear':
-								$('#markItUp').markItUp(myDotclearSettings);
+								$('#markItUp').markItUp(miu_set_dotclear);
 								break;
 							case 'html':
-								$('#markItUp').markItUp(myHtmlSettings);
+								$('#markItUp').markItUp(miu_set_html);
 								break;
 							case 'markdown':
-								$('#markItUp').markItUp(myMarkdownSettings);
+								$('#markItUp').markItUp(miu_set_markdown);
 								break;
 							case 'textile':
-								$('#markItUp').markItUp(myTextileSettings);
+								$('#markItUp').markItUp(miu_set_textile);
 								break;
 							case 'texy':
-								$('#markItUp').markItUp(myTexySettings);
+								$('#markItUp').markItUp(miu_set_texy);
 								break;
 							case 'txt2tags':
-								$('#markItUp').markItUp(myTxt2tagsSettings);
+								$('#markItUp').markItUp(miu_set_txt2tags);
 								break;
 							case 'xbbcode':
-								$('#markItUp').markItUp(myXbbcodeSettings);
+								$('#markItUp').markItUp(miu_set_xbbcode);
 								break;
 							case 'wiki':
-								$('#markItUp').markItUp(myWikiSettings);
+								$('#markItUp').markItUp(miu_set_wiki);
 								break;
 						}
 						return false;

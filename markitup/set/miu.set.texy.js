@@ -1,17 +1,21 @@
-// ----------------------------------------------------------------------------
-// markItUp!
-// ----------------------------------------------------------------------------
-// Copyright (C) 2008 Jay Salvat
-// http://markitup.jaysalvat.com/
-// ----------------------------------------------------------------------------
-// Texy! set by Peter Kahoun
-// http://kahi.cz
-// ----------------------------------------------------------------------------
-// Texy!
-// http://texy.info
-// Feel free to do anything with this.
-// -------------------------------------------------------------------
-myTexySettings = {
+/*
+# markItUp!
+
+Copyright (C) 2008 Jay Salvat
+http://markitup.jaysalvat.com/
+
+## Markup language: Texy! <http://texy.info>
+
+## Description
+ - A basic Texy markup set with Headings, Bold, Italic, Picture, Link, Lists, Quotes and Codes (Inline and Block).
+
+## Install
+ 1. Download the zip file
+ 2. Unzip it in your markItUp! sets folder
+ 3. Modify your JS link to point at this set.js
+*/
+
+miu_set_texy = {
 	nameSpace:		"texy", // Useful to prevent multi-instances CSS conflict
 	previewParserPath:	'', // path to your Texy parser
 	onShiftEnter:		{keepDefault:false, replaceWith:'\n\n'},

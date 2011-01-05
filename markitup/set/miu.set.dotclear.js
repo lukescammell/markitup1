@@ -1,14 +1,22 @@
-// -------------------------------------------------------------------
-// markItUp!
-// --------------------------------------------------------------------
-// Copyright (C) 2008 Jay Salvat
-// http://markitup.jaysalvat.com/
-// -------------------------------------------------------------------
-// Dotclear Wiki tags example
-// -------------------------------------------------------------------
-// Feel free to add more tags
-// -------------------------------------------------------------------
-myDotclearSettings = {
+/*
+# markItUp!
+
+Copyright (C) 2008 Jay Salvat
+http://markitup.jaysalvat.com/
+
+## Markup language: Dotclear <http://dotclear.org/documentation/2.0/usage/syntaxes>
+
+## Description
+ - A basic Dotclear markup set with Headings, Bold, Italic, Stroke through, Picture, Link, List, Quotes, Code, Preview button.
+ - Feel free to add more tags.
+
+## Install
+ 1. Download the zip file
+ 2. Unzip it in your markItUp! sets folder
+ 3. Modify your JS link to point at this set.js
+*/
+
+miu_set_dotclear = {
 	nameSpace:		"dotclear", // Useful to prevent multi-instances CSS conflict
 	previewParserPath:	'', // path to your DotClear parser
 	onShiftEnter:		{keepDefault:false, replaceWith:'%%%\n'},

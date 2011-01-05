@@ -1,15 +1,22 @@
-// ----------------------------------------------------------------------------
-// markItUp!
-// ----------------------------------------------------------------------------
-// Copyright (C) 2008 Jay Salvat
-// http://markitup.jaysalvat.com/
-// ----------------------------------------------------------------------------
-// BBCode tags example
-// http://en.wikipedia.org/wiki/Bbcode
-// ----------------------------------------------------------------------------
-// Feel free to add more tags
-// ----------------------------------------------------------------------------
-myBbcodeSettings = {
+/*
+# markItUp!
+
+Copyright (C) 2008 Jay Salvat
+http://markitup.jaysalvat.com/
+
+## Markup language: BBCode <http://en.wikipedia.org/wiki/Bbcode>
+
+## Description
+ - A basic BBCode markup set with Bold, Italic, Underline, Picture, Link, Size, List, Quotes, Code, Clean button, Preview button.
+ - Feel free to add more tags.
+
+## Install
+ 1. Download the zip file
+ 2. Unzip it in your markItUp! sets folder
+ 3. Modify your JS link to point at this set.js
+*/
+
+miu_set_bbcode = {
 	nameSpace:		"bbcode", // Useful to prevent multi-instances CSS conflict
 	previewParserPath:	'', // path to your BBCode parser
 	markupSet: [

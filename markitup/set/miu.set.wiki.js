@@ -1,14 +1,22 @@
-// -------------------------------------------------------------------
-// markItUp!
-// -------------------------------------------------------------------
-// Copyright (C) 2008 Jay Salvat
-// http://markitup.jaysalvat.com/
-// -------------------------------------------------------------------
-// Mediawiki Wiki tags example
-// -------------------------------------------------------------------
-// Feel free to add more tags
-// -------------------------------------------------------------------
-myWikiSettings = {
+/*
+# markItUp!
+
+Copyright (C) 2008 Jay Salvat
+http://markitup.jaysalvat.com/
+
+## Markup language: Wiki
+
+## Description
+ - A basic Mediawiki Wiki markup set with Headings, Bold, Italic, Stroke through, Picture, Link, List, Quotes, Code, Preview button.
+ - Feel free to add more tags.
+
+## Install
+ 1. Download the zip file
+ 2. Unzip it in your markItUp! sets folder
+ 3. Modify your JS link to point at this set.js
+*/
+
+miu_set_wiki = {
 	nameSpace:		"wiki", // Useful to prevent multi-instances CSS conflict
 	previewParserPath:	'', // path to your Wiki parser
 	onShiftEnter:		{keepDefault:false, replaceWith:'\n\n'},

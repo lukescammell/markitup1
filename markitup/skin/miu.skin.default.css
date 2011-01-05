@@ -57,7 +57,7 @@
 	width:22px;
 	height:5px;
 	margin:0 auto;
-	background-image:url("../../icons/default/i/markitup.icons.default.16px.png");
+	background-image:url("../icons/default/i/markitup.icons.default.16px.png");
 	background-position:0 0;
 	cursor:n-resize;
 }
@@ -90,7 +90,7 @@
 /* Display menu indicator overlay icon */
 li.markItUpDropMenu,
 li.markItUpDropMenu:hover {
-	background:url("../../icons/default/i/markitup.icons.default.16px.png") no-repeat scroll 19px -119px transparent;
+	background:url("../icons/default/i/markitup.icons.default.16px.png") no-repeat scroll 19px -119px transparent;
 }
 
 /******************************************************************************/
@@ -126,12 +126,12 @@ li.markItUpDropMenu:hover {
  * These are the button sprites, you no longer need a style.css for each set...
  * You can always override the look of the buttons in a skin.
  * If you are sticking with 16px icons, then you only need to override the one rule, eg:
- * .markItUpButton a {background-image:url("../../icons/default/i/markitup.icons.default.16px.png");}
+ * .markItUpButton a {background-image:url("../icons/default/i/markitup.icons.default.16px.png");}
  * 
  * Dead useful: http://spritegen.website-performance.org/
  */
 .markItUpButton a {
-	background-image:url("../../icons/default/i/markitup.icons.default.16px.png");	/* Yeah, this line here! */
+	background-image:url("../icons/default/i/markitup.icons.default.16px.png");	/* Yeah, this line here! */
 	/* background-image:url("../../icons/default/i/miu-btn-sprite-8bit-bg-ededed.png"); */	/* Smaller file size, 8bit option */
 	background-repeat:no-repeat;
 	display:block;

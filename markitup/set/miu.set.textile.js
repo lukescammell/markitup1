@@ -1,16 +1,22 @@
-// -------------------------------------------------------------------
-// markItUp!
-// -------------------------------------------------------------------
-// Copyright (C) 2008 Jay Salvat
-// http://markitup.jaysalvat.com/
-// -------------------------------------------------------------------
-// Textile tags example
-// http://en.wikipedia.org/wiki/Textile_(markup_language)
-// http://www.textism.com/
-// -------------------------------------------------------------------
-// Feel free to add more tags
-// -------------------------------------------------------------------
-myTextileSettings = {
+/*
+# markItUp!
+
+Copyright (C) 2008 Jay Salvat
+http://markitup.jaysalvat.com/
+
+## Markup language: Textile <http://www.textism.com/tools/textile/>
+
+## Description
+ - A basic Textile markup set with Headings, Bold, Italic, Stroke through, Picture, Link, List, Quotes, Code, Preview button.
+ - Feel free to add more tags.
+
+## Install
+ 1. Download the zip file
+ 2. Unzip it in your markItUp! sets folder
+ 3. Modify your JS link to point at this set.js
+*/
+
+miu_set_textile = {
 	nameSpace:		"textile", // Useful to prevent multi-instances CSS conflict
 	previewParserPath:	'', // path to your Textile parser
 	onShiftEnter:		{keepDefault:false, replaceWith:'\n\n'},

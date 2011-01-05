@@ -1,16 +1,22 @@
-// -------------------------------------------------------------------
-// markItUp!
-// -------------------------------------------------------------------
-// Copyright (C) 2008 Jay Salvat
-// http://markitup.jaysalvat.com/
-// -------------------------------------------------------------------
-// MarkDown tags example
-// http://en.wikipedia.org/wiki/Markdown
-// http://daringfireball.net/projects/markdown/
-// -------------------------------------------------------------------
-// Feel free to add more tags
-// -------------------------------------------------------------------
-myMarkdownSettings = {
+/*
+# markItUp!
+
+Copyright (C) 2008 Jay Salvat
+http://markitup.jaysalvat.com/
+
+## Markup language: Markdown <http://daringfireball.net/projects/markdown/>
+
+## Description
+ - A basic Markdown markup set with Headings, Bold, Italic, Picture, Link, List, Quotes, Code, Preview button.
+ - Feel free to add more tags.
+
+## Install
+ 1. Download the zip file
+ 2. Unzip it in your markItUp! sets folder
+ 3. Modify your JS link to point at this set.js
+*/
+
+miu_set_markdown = {
 	nameSpace:		"markdown", // Useful to prevent multi-instances CSS conflict
 	previewParserPath:	'',
 	onShiftEnter:		{keepDefault:false, openWith:'\n\n'},
@@ -40,7 +46,7 @@ myMarkdownSettings = {
 	]
 }
 
-// mIu nameSpace to avoid conflict.
+// miu namespace to avoid conflict.
 miu = {
 	markdownTitle: function(markItUp, char) {
 		heading = '';

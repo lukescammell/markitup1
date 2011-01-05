@@ -1,15 +1,22 @@
-// ----------------------------------------------------------------------------
-// markItUp!
-// ----------------------------------------------------------------------------
-// Copyright (C) 2008 Jay Salvat
-// http://markitup.jaysalvat.com/
-// ----------------------------------------------------------------------------
-// Default set, HTML tags
-// http://en.wikipedia.org/wiki/html
-// ----------------------------------------------------------------------------
-// Basic set. Feel free to add more tags
-// ----------------------------------------------------------------------------
-myDefaultSettings = {
+/*
+# markItUp!
+
+Copyright (C) 2008 Jay Salvat
+http://markitup.jaysalvat.com/
+
+## Markup language: HTML <http://www.w3.org/TR/html401/>
+
+## Description
+ - The default HTML markup set with Headings, Paragraph, Bold, Italic, Stroke through, Picture, Link, List, Clean button, Preview button.
+ - Feel free to add more tags.
+
+## Install
+ 1. Download the zip file
+ 2. Unzip it in your markItUp! sets folder
+ 3. Modify your JS link to point at this set.js
+*/
+
+miu_set_default = {
 	nameSpace:		"default", // Useful to prevent multi-instances CSS conflict
 	onShiftEnter:		{keepDefault:false, replaceWith:'<br />\n'},
 	onCtrlEnter:		{keepDefault:false, openWith:'\n<p>', closeWith:'</p>'},
