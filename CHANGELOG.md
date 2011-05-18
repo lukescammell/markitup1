@@ -1,7 +1,13 @@
-markItUp! 1.1.9
+markItUp! 1.1.11
 
 CHANGE LOG
-markItUp! 1.1.x 
+markItUp! 1.1.11 xxxx-xx-xx
+- Added multiline support (alevchuk)
+- Updated with jQuery 1.5.2
+- Added quotes to attribute selectors
+- Tried to fix the endless IE caret position bug
+- Added metakey support for Mac users (michal-krause)
+markItUp! 1.1.10 2011-02-20
 - Improved: Ajax property 'dataType' set to 'text'
 - Improved: Ajax property 'global' set to 'false'
 - Fixed: Ctrl+click selection problem

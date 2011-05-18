@@ -11,7 +11,7 @@ h1 a,
 p em a {
 	display:block;
 	overflow:hidden;
-	text-indent:-1000px;
+	text-indent:-9999px;
 	position:absolute;
 	top:0;
 	left:0;

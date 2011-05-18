@@ -1,16 +1,28 @@
-/* ===================================================================
-// markItUp! Universal MarkUp Engine, JQuery plugin
-// By Jay Salvat - http://markitup.jaysalvat.com/
-// ==================================================================*/
+/**
+# markItUp!
+## Universal MarkUp Engine, jQuery plugin
 
-/* Default markitup skin
- * =====================
- * Filename:	markitup.skin.default.css
- * Skin name:	default
- * Description:	A good set of defaults that the other skins can use as a base.
- * URL:		N/A
- * Authors:	Luke Scammell - http://scammell.co.uk/
- */
+Copyright © 2008 [Jay Salvat](http://markitup.jaysalvat.com/)
+
+## Skin name: Simple
+ - miu.skin.default.css
+
+## Description
+ - A good set of defaults that the other skins can use as a base.
+
+#### Author
+ - Jay Salvat
+ - <http://jaysalvat.com/>
+
+### Contributors
+ - Luke Scammell
+ - <http://scammell.co.uk/>
+
+## Install
+ 1. Download the zip file
+ 2. Unzip it in your markItUp! `skin` folder
+ 3. Modify your CSS link to point at this skin
+*/
 
 .markItUp,
 .markItUpContainer,
@@ -57,7 +69,7 @@
 	width:22px;
 	height:5px;
 	margin:0 auto;
-	background-image:url("../icons/default/i/markitup.icons.default.16px.png"); /* LS 2011-01-05 17:01:21 - this is really a skin thing, so it shouldn't be in the icons sprite. perhaps just Base64 URL encode it as it's very small? */
+	background-image:url("../icons/miu.icons.famfamfam.16px.png"); /* LS 2011-01-05 17:01:21 - this is really a skin thing, so it shouldn't be in the icons sprite. perhaps just Base64 URL encode it as it's very small? */
 	background-position:0 0;
 	cursor:n-resize;
 }
