@@ -1,7 +1,7 @@
 /*
 # markItUp!
 
-Copyright (C) 2008 Jay Salvat
+Copyright (C) 2011 Jay Salvat
 http://markitup.jaysalvat.com/
 
 ## Markup language: HTML <http://www.w3.org/TR/html401/>
@@ -29,8 +29,8 @@ miu_set_default = {
 		{name:'Italic', key:'I', openWith:'(!(<em>|!|<i>)!)', closeWith:'(!(</em>|!|</i>)!)', className:'miu-btn-em'},
 		{name:'Stroke through', key:'S', openWith:'<del>', closeWith:'</del>', className:'miu-btn-del'},
 		{separator:'---------------'},
-		{name:'Bullet List', openWith:'<ul>\n', closeWith:'</ul>\n', className:'miu-btn-ul'},
-		{name:'Numbered List', openWith:'<ol>\n', closeWith:'</ol>\n', className:'miu-btn-ol'},
+		{name:'Bullet List', openWith:'<li>', closeWith:'</li>', multiline:true, openBlockWith:'<ul>\n', closeBlockWith:'\n</ul>', className:'miu-btn-ul'},
+		{name:'Numbered List', openWith:'<li>', closeWith:'</li>', multiline:true, openBlockWith:'<ol>\n', closeBlockWith:'\n</ol>', className:'miu-btn-ol'},
 		{name:'Add List Item', openWith:'<li>', closeWith:'</li>', className:'miu-btn-li'},
 		{separator:'---------------' },
 		{name:'Picture', key:'P', replaceWith:'<img src="[![Source:!:http://]!]" alt="[![Alternative text]!]" />', className:'miu-btn-img'},
